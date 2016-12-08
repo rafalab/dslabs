@@ -1,4 +1,6 @@
-#' US murder totals from FBI reports and thpopulation of each state for 2010.
+#' US gun murder by state for 2010
+#' 
+#' Totals are from FBI reports. Population of each state for 2010.
 #'
 #'
 #' @docType data
