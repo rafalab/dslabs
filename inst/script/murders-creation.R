@@ -22,7 +22,6 @@ columns_to_add <- data_frame(state = c(state.name, "District of Columbia"),
                                               levels = levels(state.region)))
 
 us_murders <- full_join(us_murders, columns_to_add, by = "state")
-saveRD(us_murders, file = "/Users/ririzarr/myDocuments/teaching/data-science/labs/gun-violence/derived-data/us-murders-2010.rds")
 
 murders <- with(us_murders,
                 data.frame(state = state,
