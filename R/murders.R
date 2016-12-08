@@ -1,4 +1,4 @@
-#' US gun murder by state for 2010
+#' US gun murders by state for 2010
 #' 
 #' Totals are from FBI reports. Population of each state for 2010.
 #'

@@ -3,7 +3,7 @@
 \docType{data}
 \name{murders}
 \alias{murders}
-\title{US murder totals from FBI reports and thpopulation of each state for 2010.}
+\title{US gun murder by state for 2010}
 \format{An object of class \code{"data.frame"}.}
 \source{
 \href{https://en.wikipedia.org/wiki/Murder_in_the_United_States_by_state}{Wikipedia}
@@ -12,7 +12,7 @@
 data(murders)
 }
 \description{
-US murder totals from FBI reports and thpopulation of each state for 2010.
+Totals are from FBI reports. Population of each state for 2010.
 }
 \examples{
 data(murders)
