@@ -1,6 +1,6 @@
 Package: dslabs
 Title: Data Science Labs
-Version: 0.0.0.9000
+Version: 0.0.0.9
 Authors@R: person("Rafael A.", "Irizarry", email = "rafa@jimmy.harvard.edu", role = c("aut", "cre"))
 Description: This package includes functions and datasets for data science
     courses.
