@@ -10,15 +10,15 @@ tc <- getForm("https://docs.google.com/spreadsheet/pub",
 reported_heights_1 <- read.csv(textConnection(tc), stringsAsFactors = FALSE)[,c(1,3,2)]
 reported_heights_2 <- read.csv("https://raw.githubusercontent.com/datasciencelabs/data/master/bio260-heights.csv",
                               stringsAsFactors = FALSE)
-names(reported_heights_1) <- names(reported_heights_2) <- c("time_stamp", "gender", "height")
+names(reported_heights_1) <- names(reported_heights_2) <- c("time_stamp", "sex", "height")
 
 
 reported_heights <- rbind(reported_heights_1,
                           reported_heights_2)
 
-reported_heights <- filter(reported_heights, gender%in%c("Male","Female"))
+reported_heights <- filter(reported_heights, sex%in%c("Male","Female"))
 
-save(reported_heights, file = "data/reported-heights.rda")
+save(reported_heights, file = "data/reported_heights.rda")
               
 ### Now clean it up
 
@@ -61,9 +61,18 @@ height <- case_when(
   in_range(original*100/2.54) ~ original*100/2.54, ##meters
   in_range(guess) ~ guess) ##feet'inches''
 
-heights <- data.frame(gender = reported_heights$gender, height = height)
-#heights <- filter(heights, !is.na(height))
+heights <- data.frame(sex = reported_heights$sex, height = round(height))
+heights <- filter(heights, !is.na(height))
 
-save(reported_heights, file = "data/heights.rda")
+## balance it between male and female
+set.seed(1)
+ind1 <- which(heights$sex=="Male")
+ind2 <- which(heights$sex=="Female")
+n <- min(c(length(ind1),length(ind2)))
+ind <- c(sample(ind1,n), sample(ind2,n))
+heights <- heights[ind,]
+rownames(heights) <- NULL
+
+save(heights, file = "data/heights.rda")
 
 
