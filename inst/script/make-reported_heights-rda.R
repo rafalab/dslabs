@@ -61,7 +61,7 @@ height <- case_when(
   in_range(original*100/2.54) ~ original*100/2.54, ##meters
   in_range(guess) ~ guess) ##feet'inches''
 
-heights <- data.frame(sex = reported_heights$sex, height = round(height))
+heights <- data.frame(sex = reported_heights$sex, height = height)
 heights <- filter(heights, !is.na(height))
 
 ## balance it between male and female
@@ -70,6 +70,7 @@ ind1 <- which(heights$sex=="Male")
 ind2 <- which(heights$sex=="Female")
 n <- min(c(length(ind1),length(ind2)))
 ind <- c(sample(ind1,n), sample(ind2,n))
+ind <- sample(ind)
 heights <- heights[ind,]
 rownames(heights) <- NULL
 
