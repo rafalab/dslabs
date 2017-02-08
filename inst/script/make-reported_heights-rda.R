@@ -65,13 +65,6 @@ heights <- data.frame(sex = reported_heights$sex, height = height)
 heights <- filter(heights, !is.na(height))
 
 ## balance it between male and female
-set.seed(1)
-ind1 <- which(heights$sex=="Male")
-ind2 <- which(heights$sex=="Female")
-n <- min(c(length(ind1),length(ind2)))
-ind <- c(sample(ind1,n), sample(ind2,n))
-ind <- sample(ind)
-heights <- heights[ind,]
 rownames(heights) <- NULL
 
 save(heights, file = "data/heights.rda")
