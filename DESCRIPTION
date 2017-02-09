@@ -6,6 +6,7 @@ Author: Rafael A. Irizarry
 Maintainer: Rafael A. Irizarry <rafa@jimmy.harvard.edu>
 Depends:
     R (>= 3.3.1)
+Imports: ggplot2
 License: Artistic-2.0
 Encoding: UTF-8
 LazyData: true
