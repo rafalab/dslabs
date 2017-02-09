@@ -5,7 +5,7 @@
 \title{My theme set}
 \usage{
 my_theme_set(new = "theme_minimal", args = NULL, base_size = 11,
-  base_family = "Helvetica", ...)
+  base_family = "Helvetica", bold_title = TRUE, ...)
 }
 \arguments{
 \item{new}{a prebuilt theme. Defaults to theme_minimal}
@@ -15,6 +15,8 @@ my_theme_set(new = "theme_minimal", args = NULL, base_size = 11,
 \item{base_size}{if \code{"args"} is \code{"NULL"}, base_size is one of the arguments passed to the theme function. It defaults to 11.}
 
 \item{base_family}{if \code{"args"} is \code{"NULL"}, base_family is one of the arguments passed to the theme function. It defaults to Helvetica.}
+
+\item{bold_title}{it TRUE, sets titles to be bold}
 
 \item{...}{additional arguments to be used by theme_set}
 }
