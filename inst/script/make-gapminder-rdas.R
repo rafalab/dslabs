@@ -37,6 +37,7 @@ gapminder <- filter(gapminder, year>=1960)
 out <- gapminder %>% group_by(country) %>% summarize_at(c("infant_mortality","life_expectancy","fertility","income","gdp_per_capita"), function(x) all(is.na(x))) %>% 
   filter(life_expectancy | fertility | income | gdp_per_capita) %>% .$country
 gapminder <- filter(gapminder, !country%in%out)
+
 rm(tables); gc(verbose = FALSE)
 
 
@@ -44,5 +45,5 @@ oecd <- c("Australia","Austria","Belgium","Canada","Chile","Country","Czech Repu
 opec <- c("Algeria","Angola","Ecuador","Iran","Iraq","Kuwait","Libya","Nigeria","Qatar","Saudi Arabia","United Arab Emirates","Venezuela")
 gapminder <- mutate(gapminder, region = factor(countrycode(country, "country.name", "region"))) %>% mutate(country = factor(country))
 
-save(gpminder, oecd, opec, file="data/gapminder.rda")
+save(gapminder, oecd, opec, file="data/gapminder.rda")
 
