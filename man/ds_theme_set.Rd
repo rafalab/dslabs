@@ -4,7 +4,7 @@
 \alias{ds_theme_set}
 \title{dslabs theme set}
 \usage{
-ds_theme_set(new = "theme_minimal", args = NULL, base_size = 11,
+ds_theme_set(new = "theme_bw", args = NULL, base_size = 11,
   base_family = "Helvetica", bold_title = TRUE, ...)
 }
 \arguments{

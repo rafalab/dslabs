@@ -20,7 +20,7 @@
 #'
 #' @export
 #' 
-ds_theme_set <- function(new = "theme_minimal", args = NULL,
+ds_theme_set <- function(new = "theme_bw", args = NULL,
                          base_size = 11, base_family = "Helvetica", 
                          bold_title = TRUE, 
                          ...){
