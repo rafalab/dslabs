@@ -40,10 +40,16 @@ gapminder <- filter(gapminder, !country%in%out)
 
 rm(tables); gc(verbose = FALSE)
 
+## Add continent and region
+gapminder <- mutate(gapminder, 
+                    continent = factor(countrycode(country, "country.name", "continent")),
+                    region = factor(countrycode(country, "country.name", "region"))) %>%
+  mutate(country = factor(country))
+
+gapminder <- as.data.frame(gapminder)
 
 oecd <- c("Australia","Austria","Belgium","Canada","Chile","Country","Czech Republic","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Israel","Italy","Japan","Korea","Luxembourg","Mexico","Netherlands","New Zealand","Norway","Poland","Portugal","Slovak Republic","Slovenia","Spain","Sweden","Switzerland","Turkey","United Kingdom","United States")
 opec <- c("Algeria","Angola","Ecuador","Iran","Iraq","Kuwait","Libya","Nigeria","Qatar","Saudi Arabia","United Arab Emirates","Venezuela")
-gapminder <- mutate(gapminder, region = factor(countrycode(country, "country.name", "region"))) %>% mutate(country = factor(country))
-gapminder <- as.data.frame(gapminder)
+
 save(gapminder, oecd, opec, file="data/gapminder.rda")
 
