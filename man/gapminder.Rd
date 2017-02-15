@@ -23,7 +23,8 @@ Health and income outcomes for 184 countries from 1960 to 2016. Also includes tw
  \item population. Country population.
  \item income. Average income for the country.
  \item gpd_per_capita. GDP per capita for the country.
- \item region. Region of the world.
+ \item continent. 
+ \item region. Geographical region.
 }
 }
 \examples{
