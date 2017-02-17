@@ -9,8 +9,7 @@
 #'  \item life_expectancy. Life expectancy in years.
 #'  \item fertility. Average number of children per woman. 
 #'  \item population. Country population.
-#'  \item income. Average income for the country.
-#'  \item gpd_per_capita. GDP per capita for the country.
+#'  \item gpd. GDP according to World Bank.
 #'  \item continent. 
 #'  \item region. Geographical region.
 #' }

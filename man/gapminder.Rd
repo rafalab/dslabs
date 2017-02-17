@@ -21,8 +21,7 @@ Health and income outcomes for 184 countries from 1960 to 2016. Also includes tw
  \item life_expectancy. Life expectancy in years.
  \item fertility. Average number of children per woman. 
  \item population. Country population.
- \item income. Average income for the country.
- \item gpd_per_capita. GDP per capita for the country.
+ \item gpd. GDP according to World Bank.
  \item continent. 
  \item region. Geographical region.
 }

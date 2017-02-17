@@ -8,11 +8,11 @@ urls <- c("https://spreadsheets.google.com/pub?key=phAwcNAVuyj0NpF2PTov2Cw&outpu
           "https://spreadsheets.google.com/pub?key=phAwcNAVuyj2tPLxKvvnNPA&output=csv",
           "https://spreadsheets.google.com/pub?key=phAwcNAVuyj0TAlJeCEzcGQ&output=csv",
           "https://spreadsheets.google.com/pub?key=phAwcNAVuyj0XOoBL_n5tAQ&output=csv",
-          "https://spreadsheets.google.com/pub?key=phAwcNAVuyj1jiMAkmq1iMg&output=csv",
-          "https://spreadsheets.google.com/pub?key=0AkBd6lyS3EmpdHo5S0J6ekhVOF9QaVhod05QSGV4T3c&output=csv")
+          "http://spreadsheets.google.com/pub?key=pyj6tScZqmEfI4sLVvEQtHw&output=csv")
+
 
 names(urls) <- c("infant_mortality", "life_expectancy",
-                 "fertility","population","income","gdp_per_capita")
+                 "fertility","population","gdp")
 
 tables <- lapply(urls, read_csv, na = c("", "NA", "-", "."))
 
@@ -34,8 +34,9 @@ gapminder <- Reduce(full_join, tables)
 gapminder <- filter(gapminder, year>=1960)
 
 ### remove countries that dont have the data needed for the main figures
-out <- gapminder %>% group_by(country) %>% summarize_at(c("infant_mortality","life_expectancy","fertility","income","gdp_per_capita"), function(x) all(is.na(x))) %>% 
-  filter(life_expectancy | fertility | income | gdp_per_capita) %>% .$country
+out <- gapminder %>% group_by(country) %>% summarize_at(c("infant_mortality","life_expectancy","fertility","gdp"), function(x) all(is.na(x))) %>% 
+  filter(life_expectancy | fertility | gdp) %>% .$country
+out <- c(out, "Channel Islands") ##removed because no information on continent or region. 
 gapminder <- filter(gapminder, !country%in%out)
 
 rm(tables); gc(verbose = FALSE)
