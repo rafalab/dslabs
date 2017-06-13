@@ -9,7 +9,7 @@ take_poll(n, ...)
 \arguments{
 \item{n}{the sample size}
 
-\item{...}{additional arguments to be used by the function that generates the}
+\item{...}{additional arguments to be used by the function that generates the sample}
 }
 \value{
 None
