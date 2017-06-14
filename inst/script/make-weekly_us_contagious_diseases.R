@@ -58,4 +58,4 @@ us_contagious_diseases <- data.frame(us_contagious_diseases)
 us_contagious_diseases$state <- factor(us_contagious_diseases$state)
 us_contagious_diseases$disease <- factor(us_contagious_diseases$disease)
 
-save(us_contagious_diseases, file = "data/us_contagious_diseases.rda")
+save(us_contagious_diseases, file = "data/us_contagious_diseases.rda", compress="xz")
