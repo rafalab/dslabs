@@ -9,6 +9,8 @@ polls_us_election_2016$startdate <- as.Date(polls_us_election_2016$startdate,"%m
 polls_us_election_2016$enddate <- as.Date(polls_us_election_2016$enddate,"%m/%d/%Y") 
 polls_us_election_2016 <- select(polls_us_election_2016, state, startdate, enddate, pollster, grade, samplesize, population, rawpoll_clinton, rawpoll_trump, rawpoll_johnson, rawpoll_mcmullin)
 polls_us_election_2016 <- as.data.frame(polls_us_election_2016)
-polls_us_election_2016 <- mutate(polls_us_election_2016, state = factor(state), pollster = factor(pollster), grade=factor(grade), population=factor(population))
-
-save(polls_us_election_2016, file = "data/polls_us_election_2016.rda")
+polls_us_election_2016 <- mutate(polls_us_election_2016, 
+                                 state = factor(state), 
+                                 pollster = factor(pollster), 
+                                 grade=factor(grade, levels = c("D","C-","C","C+","B-","B","B+","A-","A","A+")))
+save(polls_us_election_2016, file = "data/polls_us_election_2016.rda", compress="xz")
