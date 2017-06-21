@@ -26,7 +26,7 @@
 #' @keywords datasets
 #'
 #'
-#' @source \href{https://projects.fivethirtyeight.com/2016-election-forecast/?ex_cid=rrpromo}{Fivethirtyeight}
+#' @source \href{https://projects.fivethirtyeight.com/2016-election-forecast/?ex_cid=rrpromo}{Fivethirtyeight}, \href{https://data.world/dash/2016-electoral-college-results}{data.world/dash}
 #'
 #'
 #' @aliases us_electoral_votes_2016

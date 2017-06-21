@@ -7,7 +7,7 @@
 \title{Fivethirtyeight 2016 Poll Data}
 \format{An object of class \code{"data.frame"}.}
 \source{
-\href{https://projects.fivethirtyeight.com/2016-election-forecast/?ex_cid=rrpromo}{Fivethirtyeight}
+\href{https://projects.fivethirtyeight.com/2016-election-forecast/?ex_cid=rrpromo}{Fivethirtyeight}, \href{https://data.world/dash/2016-electoral-college-results}{data.world/dash}
 }
 \usage{
 data(polls_us_election_2016)
