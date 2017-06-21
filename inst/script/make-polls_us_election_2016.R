@@ -2,6 +2,7 @@ library(readr)
 library(tidyverse)
 library(stringr)
 
+##polls
 url <- "http://projects.fivethirtyeight.com/general-model/president_general_polls_2016.csv"
 polls_us_election_2016 <- read_csv(url)
 polls_us_election_2016 <- filter(polls_us_election_2016, type=="polls-only")
@@ -13,4 +14,16 @@ polls_us_election_2016 <- mutate(polls_us_election_2016,
                                  state = factor(state), 
                                  pollster = factor(pollster), 
                                  grade=factor(grade, levels = c("D","C-","C","C+","B-","B","B+","A-","A","A+")))
-save(polls_us_election_2016, file = "data/polls_us_election_2016.rda", compress="xz")
+
+##electoral votes
+us_electoral_votes_2016 <- read.csv("inst/extdata/us-electoral-votes-2016.csv", stringsAsFactors = FALSE)
+names(us_electoral_votes_2016) <- tolower(names(us_electoral_votes_2016))
+us_electoral_votes_2016 <- us_electoral_votes_2016[,-3] 
+us_electoral_votes_2016 <- us_electoral_votes_2016[-20,] ##take out second Maine
+us_electoral_votes_2016$votes[us_electoral_votes_2016$state=="Maine"] <- 2
+us_electoral_votes_2016$votes[us_electoral_votes_2016$state=="Nebraska"] <- 2
+add <- data.frame(state=c(paste0("Maine CD-",1:2), paste0("Nebraska CD-",1:3)), votes=rep(1,5))
+us_electoral_votes_2016 <- rbind(us_electoral_votes_2016, add)
+us_electoral_votes_2016 <- arrange(us_electoral_votes_2016, state)
+
+save(us_electoral_votes_2016, polls_us_election_2016, file = "data/polls_us_election_2016.rda", compress="xz")

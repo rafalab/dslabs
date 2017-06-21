@@ -1,6 +1,6 @@
 #' Fivethirtyeight 2016 Poll Data 
 #' 
-#' Poll results from US 2016 presidential elections aggregated from HuffPost Pollster, RealClearPolitics, polling firms and news reports. Original csv file is here: http://projects.fivethirtyeight.com/general-model/president_general_polls_2016.csv
+#' Poll results from US 2016 presidential elections aggregated from HuffPost Pollster, RealClearPolitics, polling firms and news reports. Original csv file is here: http://projects.fivethirtyeight.com/general-model/president_general_polls_2016.csv The dataset also includes electoral votes by state data in the us_electoral_votes_2016 object. 
 #'
 #'
 #' \itemize{
@@ -28,6 +28,8 @@
 #'
 #' @source \href{https://projects.fivethirtyeight.com/2016-election-forecast/?ex_cid=rrpromo}{Fivethirtyeight}
 #'
+#'
+#' @aliases us_electoral_votes_2016
 #'
 #' @examples
 #' data(polls_us_election_2016)
