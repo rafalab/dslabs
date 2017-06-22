@@ -25,5 +25,6 @@ us_electoral_votes_2016$votes[us_electoral_votes_2016$state=="Nebraska"] <- 2
 add <- data.frame(state=c(paste0("Maine CD-",1:2), paste0("Nebraska CD-",1:3)), votes=rep(1,5))
 us_electoral_votes_2016 <- rbind(us_electoral_votes_2016, add)
 us_electoral_votes_2016 <- arrange(us_electoral_votes_2016, state)
+us_electoral_votes_2016$state[us_electoral_votes_2016$state=="Lousiana"] <- "Louisiana"
 
 save(us_electoral_votes_2016, polls_us_election_2016, file = "data/polls_us_election_2016.rda", compress="xz")
