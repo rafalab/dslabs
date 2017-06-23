@@ -28,6 +28,10 @@ Poll results from US 2016 presidential elections aggregated from HuffPost Pollst
 \item rawpoll_trump. Percentage for Donald Trump
 \item rawpoll_johnson. Percentage for Gary Johnson
 \item rawpoll_mcmullin. Percentage for Evan McCullin.
+\item adjpoll_clinton. Fivethirtyeight adjusted percentage for Hillary Clinton.
+\item ajdpoll_trump. Fivethirtyeight adjusted percentage for Donald Trump
+\item adjpoll_johnson. Fivethirtyeight adjusted percentage for Gary Johnson
+\item adjpoll_mcmullin. Fivethirtyeight adjusted percentage for Evan McCullin.
 }
 }
 \examples{
