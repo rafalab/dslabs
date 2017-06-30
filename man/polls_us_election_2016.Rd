@@ -3,17 +3,17 @@
 \docType{data}
 \name{polls_us_election_2016}
 \alias{polls_us_election_2016}
-\alias{us_electoral_votes_2016}
+\alias{results_us_election_2016}
 \title{Fivethirtyeight 2016 Poll Data}
 \format{An object of class \code{"data.frame"}.}
 \source{
-\href{https://projects.fivethirtyeight.com/2016-election-forecast/?ex_cid=rrpromo}{Fivethirtyeight}, \href{https://data.world/dash/2016-electoral-college-results}{data.world/dash}
+\href{https://docs.google.com/spreadsheets/d/1zxyOQDjNOJS_UkzerorUCf2OAdcMcIQEwRciKuYBIZ4/pubhtml?widget=true&headers=false#gid=658726802}{Ballotpedia}
 }
 \usage{
 data(polls_us_election_2016)
 }
 \description{
-Poll results from US 2016 presidential elections aggregated from HuffPost Pollster, RealClearPolitics, polling firms and news reports. Original csv file is here: http://projects.fivethirtyeight.com/general-model/president_general_polls_2016.csv The dataset also includes electoral votes by state data in the us_electoral_votes_2016 object.
+Poll results from US 2016 presidential elections aggregated from HuffPost Pollster, RealClearPolitics, polling firms and news reports. Original csv file is here: http://projects.fivethirtyeight.com/general-model/president_general_polls_2016.csv The dataset also includes election results and state electoral votes in results_us_election_2016
 }
 \details{
 \itemize{

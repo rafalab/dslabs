@@ -15,16 +15,20 @@ polls_us_election_2016 <- mutate(polls_us_election_2016,
                                  pollster = factor(pollster), 
                                  grade=factor(grade, levels = c("D","C-","C","C+","B-","B","B+","A-","A","A+")))
 
-##electoral votes
-us_electoral_votes_2016 <- read.csv("inst/extdata/us-electoral-votes-2016.csv", stringsAsFactors = FALSE)
-names(us_electoral_votes_2016) <- tolower(names(us_electoral_votes_2016))
-us_electoral_votes_2016 <- us_electoral_votes_2016[,-3] 
-us_electoral_votes_2016 <- us_electoral_votes_2016[-20,] ##take out second Maine
-us_electoral_votes_2016$votes[us_electoral_votes_2016$state=="Maine"] <- 2
-us_electoral_votes_2016$votes[us_electoral_votes_2016$state=="Nebraska"] <- 2
-add <- data.frame(state=c(paste0("Maine CD-",1:2), paste0("Nebraska CD-",1:3)), votes=rep(1,5))
-us_electoral_votes_2016 <- rbind(us_electoral_votes_2016, add)
-us_electoral_votes_2016 <- arrange(us_electoral_votes_2016, state)
-us_electoral_votes_2016$state[us_electoral_votes_2016$state=="Lousiana"] <- "Louisiana"
-
-save(us_electoral_votes_2016, polls_us_election_2016, file = "data/polls_us_election_2016.rda", compress="xz")
+##2016 results
+library(googlesheets)
+url <- "https://docs.google.com/spreadsheets/d/1zxyOQDjNOJS_UkzerorUCf2OAdcMcIQEwRciKuYBIZ4/pubhtml?widget=true&headers=false#gid=658726802"
+key <- extract_key_from_url(url)
+gs <- gs_key(key)
+tmp <- gs_read(gs, ws = "President", range = cell_cols(c(1:10)))
+tmp <- tmp[-c(1:2),]
+results_us_election_2016 <- 
+  data.frame(state=tmp[[1]], 
+             electoral_votes=tmp[[2]],
+             clinton=as.numeric(gsub("%","",tmp[[7]])),
+             trump=as.numeric(gsub("%","",tmp[[8]])),
+             others=as.numeric(gsub("%","",tmp[[9]])),
+             stringsAsFactors = FALSE) %>%
+  mutate(state = ifelse(state == "Washington, D.C.", "District of Columbia", state))
+  
+save(polls_us_election_2016, results_us_election_2016, file = "data/polls_us_election_2016.rda", compress="xz")
