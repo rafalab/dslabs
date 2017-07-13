@@ -16,4 +16,3 @@ data(na_example)
 print(sum(is.na(na_example)))
 }
 \keyword{datasets}
-

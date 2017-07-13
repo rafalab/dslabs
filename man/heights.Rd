@@ -22,4 +22,3 @@ data(heights)
 head(heights)
 }
 \keyword{datasets}
-

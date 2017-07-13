@@ -1,13 +1,14 @@
 #' Fivethirtyeight 2016 Poll Data 
 #' 
-#' Poll results from US 2016 presidential elections aggregated from HuffPost Pollster, RealClearPolitics, polling firms and news reports. Original csv file is here: http://projects.fivethirtyeight.com/general-model/president_general_polls_2016.csv The dataset also includes election results and state electoral votes in results_us_election_2016
+#' Poll results from US 2016 presidential elections aggregated from HuffPost Pollster, RealClearPolitics, polling firms and news reports. The original csv file is here: http://projects.fivethirtyeight.com/general-model/president_general_polls_2016.csv.
+#' The dataset also includes election results (popular vote) and electoral college votes in results_us_election_2016.
 #'
 #'
 #' \itemize{
 #' \item state. State in which poll was taken. `U.S` is for national polls.
-#' \item startdate. Poll's start data.
-#' \item enddate. Poll's end data.
-#' \item pollster. Pollster conducting the poll
+#' \item startdate. Poll's start date.
+#' \item enddate. Poll's end date.
+#' \item pollster. Pollster conducting the poll.
 #' \item grade. Grade assigned by fivethirtyeight to pollster.
 #' \item samplesize. Sample size. 
 #' \item population. Type of population being polled.

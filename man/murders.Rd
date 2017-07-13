@@ -12,11 +12,19 @@
 data(murders)
 }
 \description{
-Totals are from FBI reports. Population of each state for 2010.
+Gun murder data are from FBI reports. Also contains the population of each state.
+}
+\details{
+\itemize{
+ \item state. US state
+ \item abb. Abbreviation of US state
+ \item region. Geographical US region
+ \item population. State population (2010)
+ \item total. Number of gun murders in state (2010)
+}
 }
 \examples{
 data(murders)
 print(murders)
 }
 \keyword{datasets}
-

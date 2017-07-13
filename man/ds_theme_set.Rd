@@ -8,15 +8,15 @@ ds_theme_set(new = "theme_bw", args = NULL, base_size = 11,
   base_family = "Helvetica", bold_title = TRUE, ...)
 }
 \arguments{
-\item{new}{a prebuilt theme. Defaults to theme_minimal}
+\item{new}{a prebuilt ggplot2 theme. Defaults to \code{"theme_minimal"}}
 
-\item{args}{the arguments to be passed along to the theme function. Defaults to \code{"NULL"}.}
+\item{args}{the arguments to be passed along to the ggplot2 theme function. Defaults to \code{"NULL"}.}
 
 \item{base_size}{if \code{"args"} is \code{"NULL"}, base_size is one of the arguments passed to the theme function. It defaults to 11.}
 
 \item{base_family}{if \code{"args"} is \code{"NULL"}, base_family is one of the arguments passed to the theme function. It defaults to Helvetica.}
 
-\item{bold_title}{it TRUE, sets titles to be bold}
+\item{bold_title}{if TRUE, sets titles to be bold}
 
 \item{...}{additional arguments to be used by theme}
 }
@@ -24,7 +24,7 @@ ds_theme_set(new = "theme_bw", args = NULL, base_size = 11,
 None
 }
 \description{
-Called without arguments, this function sets a ggplot2 theme used throughout the data science labs.
+This function sets a ggplot2 theme used throughout the data science labs. It can be called without arguments.
 }
 \examples{
 library(ggplot2)
@@ -34,4 +34,3 @@ main="Scatterplots of MPG vs. Horsepower",
 xlab="Horsepower", ylab="Miles per Gallon")
 
 }
-

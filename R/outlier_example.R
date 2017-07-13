@@ -1,6 +1,6 @@
-#' Adulte male heights in feet with outlier
+#' Adult male heights in feet with outliers
 #' 
-#' This dataset was randomly generated with a normal distribution with average 5 feet nine inches and standard deviation 3 inches. One value was changed to be mistakenly reported in centimeters rather than feet.
+#' This dataset was randomly generated with a normal distribution (average: 5 feet 9 inches, standard deviation: 3 inches). One value was changed to be mistakenly reported in centimeters rather than feet.
 #'
 #'
 #' @docType data
