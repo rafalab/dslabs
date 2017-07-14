@@ -3,13 +3,13 @@
 \docType{data}
 \name{outlier_example}
 \alias{outlier_example}
-\title{Adulte male heights in feet with outlier}
+\title{Adult male heights in feet with outliers}
 \format{An object of class \code{"numeric"}.}
 \usage{
 data(outlier_example)
 }
 \description{
-This dataset was randomly generated with a normal distribution with average 5 feet nine inches and standard deviation 3 inches. One value was changed to be mistakenly reported in centimeters rather than feet.
+This dataset was randomly generated with a normal distribution (average: 5 feet 9 inches, standard deviation: 3 inches). One value was changed to be mistakenly reported in centimeters rather than feet.
 }
 \examples{
 data(outlier_example)
@@ -17,4 +17,3 @@ mean(outlier_example)
 median(outlier_example)
 }
 \keyword{datasets}
-

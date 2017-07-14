@@ -3,19 +3,19 @@
 \docType{data}
 \name{reported_heights}
 \alias{reported_heights}
-\title{Self-Reported Heights}
+\title{Self-reported Heights}
 \format{An object of class \code{"data.frame"}.}
 \usage{
 data(reported_heights)
 }
 \description{
-Students were asked to report their height in inches and sex on an online form. 
-This table includes the results from four courses. The variables are as follows:
+Students were asked to report their height in inches and sex in an online form. 
+This table includes the results from four courses.
 }
 \details{
 \itemize{
  \item time_stamp. Time and date of the entry.
- \item sex. Sex of the student. 
+ \item sex. Sex of the student.
  \item height. Height as reported by student by filling in a text free box. 
 }
 }
@@ -24,4 +24,3 @@ data(reported_heights)
 head(reported_heights)
 }
 \keyword{datasets}
-

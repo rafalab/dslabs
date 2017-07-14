@@ -1,11 +1,11 @@
-#' Self-Reported Heights 
+#' Self-reported Heights 
 #' 
-#' Students were asked to report their height in inches and sex on an online form. 
-#' This table includes the results from four courses. The variables are as follows:
+#' Students were asked to report their height in inches and sex in an online form. 
+#' This table includes the results from four courses.
 #'
 #'\itemize{
 #'  \item time_stamp. Time and date of the entry.
-#'  \item sex. Sex of the student. 
+#'  \item sex. Sex of the student.
 #'  \item height. Height as reported by student by filling in a text free box. 
 #' }
 #'
