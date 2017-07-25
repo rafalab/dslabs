@@ -7,9 +7,9 @@
 take_poll(n, ...)
 }
 \arguments{
-\item{...}{additional arguments to be used by the function \code{sample}.}
+\item{n}{Sample size}
 
-\item{n.}{Sample size}
+\item{...}{additional arguments to be used by the function \code{sample}.}
 }
 \value{
 None
@@ -18,7 +18,6 @@ None
 The function shows a plot of a random sample drawn from an urn with blue and red beads. The sample is taken with replacement. The proportion of blue beads is not shown so that students can try to estimate it.
 }
 \examples{
-library(ggplot2)
 take_poll(25)
 
 }

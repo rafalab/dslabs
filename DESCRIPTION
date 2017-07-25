@@ -1,6 +1,6 @@
 Package: dslabs
 Title: Data Science Labs
-Version: 0.1.0
+Version: 0.1.1
 Description: Datasets and functions that facilitate data analysis labs in data science courses and workshops. 
 Author: Rafael A. Irizarry
 Maintainer: Rafael A. Irizarry <rafa@jimmy.harvard.edu>
