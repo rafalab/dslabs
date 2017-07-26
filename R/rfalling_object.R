@@ -15,7 +15,7 @@
 #'
 #' @examples
 #' 
-#' dat <- falling_object()
+#' dat <- rfalling_object()
 #' with(dat, plot(time, observed_distance))
 #' with(dat, lines(time, distance, col = "blue"))
 #'
@@ -24,7 +24,7 @@
 #' @export
 #'
 
-falling_object <- function(n = 14, d_0 = 55.86, v_0 = 0, g = -9.8,  
+rfalling_object <- function(n = 14, d_0 = 55.86, v_0 = 0, g = -9.8,  
                            scale = 1,
                            time = seq(0, 3.25, length.out = n),
                            error_distribution = c("rnorm", "rt"),
@@ -46,5 +46,5 @@ falling_object <- function(n = 14, d_0 = 55.86, v_0 = 0, g = -9.8,
   attr(dat, "params")  <- c(d_0 = d_0, v_0 = v_0, g = g, scale = scale)
   attr(dat, "error_distribution") <- error_distribution
   
-  dat
+  dat 
 }
