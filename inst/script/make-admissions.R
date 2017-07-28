@@ -12,7 +12,8 @@ admissions <- h %>%
   slice(2:n()) %>%
   gather(key, value, -major) %>%
   separate(key, c("gender", "key"), "_")  %>%
-  spread(key, value) %>% arrange(gender) %>%
+  spread(key, value) %>% 
+  arrange(gender) %>%
   mutate_at(c("admitted","applicants"), funs(parse_number)) %>%
   data.frame(., stringsAsFactors = FALSE)
 
