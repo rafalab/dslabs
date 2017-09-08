@@ -4,6 +4,9 @@ library(readxl)
 library(tidyr)
 library(countrycode)
 
+
+## Note that the location of these files change
+## You might have to go here https://www.gapminder.org/data/ and find the new links
 urls <- c("https://spreadsheets.google.com/pub?key=phAwcNAVuyj0NpF2PTov2Cw&output=csv",
           "https://spreadsheets.google.com/pub?key=phAwcNAVuyj2tPLxKvvnNPA&output=csv",
           "https://spreadsheets.google.com/pub?key=phAwcNAVuyj0TAlJeCEzcGQ&output=csv",
