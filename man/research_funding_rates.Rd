@@ -6,11 +6,7 @@
 \title{Gender bias in research funding in the Netherlands}
 \format{An object of class \code{"data.frame"}.}
 \source{
-\url{http://www.pnas.org/content/112/40/12349.abstract}{van der Lee and Ellemers (2015) PNAS}
-
-#' @examples
-data(research_funding_rates)
-research_funding_rates
+van der Lee and Ellemers (2015) PNAS \url{http://www.pnas.org/content/112/40/12349.abstract}
 }
 \usage{
 data(research_funding_rates)
@@ -31,5 +27,9 @@ success_rates_total. Overall success rate.
 success_rates_men. Success rate for men.
 success_rates_women. Success rate for women.
 }
+}
+\examples{
+data(research_funding_rates)
+research_funding_rates
 }
 \keyword{datasets}

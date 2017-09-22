@@ -18,8 +18,8 @@ Divorce rates in Maine and per capita consumption of margarine in US data
 }
 \details{
 \itemize{
-divorce_rate_maine. ivorce rates in Maine
-margarine_consumption_per_capita. per capita consumption of margarine in US.
+divorce_rate_maine. Divorce per 1000 in Maine.
+margarine_consumption_per_capita. US per capita consumption of margarine in pounds.
 year. Year.
 }
 }
