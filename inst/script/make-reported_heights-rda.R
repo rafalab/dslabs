@@ -2,6 +2,7 @@
 library(RCurl)
 library(tidyverse)
 library(stringr)
+library(lubridate)
 
 tc <- getForm("https://docs.google.com/spreadsheet/pub", 
              hl ="en_US", key = "0ApvpBbD8HP4mdDlRUi1vdTlBQ3Rub2dJSUNVUDlDdVE", 
@@ -10,58 +11,72 @@ tc <- getForm("https://docs.google.com/spreadsheet/pub",
 reported_heights_1 <- read.csv(textConnection(tc), stringsAsFactors = FALSE)[,c(1,3,2)]
 reported_heights_2 <- read.csv("https://raw.githubusercontent.com/datasciencelabs/data/master/bio260-heights.csv",
                               stringsAsFactors = FALSE)
+
 names(reported_heights_1) <- names(reported_heights_2) <- c("time_stamp", "sex", "height")
 
+reported_heights_1  <- reported_heights_1 %>% mutate(time_stamp = mdy_hms(time_stamp))
+reported_heights_2  <- reported_heights_2 %>% mutate(time_stamp = mdy_hms(time_stamp))
 
-reported_heights <- rbind(reported_heights_1,
+
+reported_heights <- bind_rows(reported_heights_1,
                           reported_heights_2)
 
-reported_heights <- filter(reported_heights, sex%in%c("Male","Female"))
+## to help keep reproducible, remove entries from after the latest data
+## from last time we saved the rda: "2017-10-14 14:07:51 UTC"
+
+reported_heights <- filter(reported_heights, sex%in%c("Male","Female")) %>%
+  filter(time_stamp <= "2017-10-14 14:07:51 UTC")  %>% arrange(time_stamp) %>%
+  mutate(time_stamp = as.character(time_stamp))
 
 save(reported_heights, file = "data/reported_heights.rda")
               
 ### Now clean it up
 
-#we have to deal with meters, centimeters and heights in form a'b"
-## we will wrange the heights out of string:
-string <- reported_heights$height
-
-
-##remove "cm", we will know when they are cm. Also get rid of spaces and "and"
-string <- gsub("&|and|cm| ", "", string)
-
-## changes words to numbers. Also small caps
-map <- data.frame(number = 1:11, 
-                  word = c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten","eleven"))
-for(i in 1:nrow(map)) string <- gsub(map[i,2], map[i,1], tolower(string))
-
-##change feet,ft to ' and inches, in to "
-string <- gsub("inches|in","\"", string)  
-string <- gsub("foot|feet|ft","\'", string)  
-               
-##The following three lines are to make convert a' or b" to a'b" format
-##add 0 inches if 5' or 6' was reported
-string <- ifelse(grepl("\\d'$", string), paste0(string,"0"), string)
-##add 0 feet if 59 inches was reported. 
-string <- ifelse(grepl("^\\d*\"", string), paste0("0'",string), string)
-
-original <- suppressWarnings(as.numeric(string))
-res <- str_match(string, "([\\d]+)[\']([\\d\\.]*)")
-first <- as.numeric(res[,2])
-second <- as.numeric(res[,3])
-guess <- first*12 + second
-
-in_range <- function(x, min_height=4.5, max_height=7){
-  ifelse(is.na(x), FALSE, between(x, min_height*12, max_height*12))
+convert_format <- function(s){
+  s %>% str_to_lower() %>% str_trim() %>%
+    str_replace("feet|foot|ft", "'") %>% #convert feet symbols to '
+    str_replace_all("inches|''|\"|cm|and", "") %>%  #remove inches, cm symbols, and
+    str_replace("^([4-6])\\s*'?$", "\\1'0") %>% #convert x or x' to x'0
+    str_replace("^([4-6])\\s*[\\s|\\.|,]\\s*(\\d+)$", "\\1'\\2") %>% #x y x'y x.y to x'y
+    str_replace_all("\\s", "") #remove all white space
+}
+words_to_numbers <- function(s){
+  str_to_lower(s) %>%  
+    str_replace_all("zero", "0") %>%
+    str_replace_all("one", "1") %>%
+    str_replace_all("two", "2") %>%
+    str_replace_all("three", "3") %>%
+    str_replace_all("four", "4") %>%
+    str_replace_all("five", "5") %>%
+    str_replace_all("six", "6") %>%
+    str_replace_all("seven", "7") %>%
+    str_replace_all("eight", "8") %>%
+    str_replace_all("nine", "9") %>%
+    str_replace_all("ten", "10") %>%
+    str_replace_all("eleven", "11")
 }
 
-height <- case_when(
-  in_range(original) ~ original, ##inches
-  in_range(original/2.54) ~ original/2.54, ##centimeters
-  in_range(original*100/2.54) ~ original*100/2.54, ##meters
-  in_range(guess) ~ guess) ##feet'inches''
+fix_meters <- function(s) str_replace(s, "^([1-2])\\s*,\\s*(\\d+)$", "\\1\\.\\2")  
 
-heights <- data.frame(sex = reported_heights$sex, height = height)
+## Now convert all heights
+smallest <- 53
+tallest <- 83
+pattern <- "^(\\d)'(\\d\\.?\\d*)$" 
+new_heights <- reported_heights %>% 
+  mutate(original = height, 
+         height = words_to_numbers(height) %>% convert_format() %>% fix_meters()) %>%
+  extract(height, c("feet", "inches"), regex = pattern, remove = FALSE) %>% 
+  mutate_at(c("height", "feet", "inches"), as.numeric) %>%
+  mutate(guess = 12*feet + inches) %>%
+  mutate(height = case_when(
+    !is.na(height) & between(height, smallest, tallest) ~ height, #inches 
+    !is.na(height) & between(height/2.54, smallest, tallest) ~ height/2.54, #centimeters
+    !is.na(height) & between(height*100/2.54, smallest, tallest) ~ height*100/2.54, #meters
+    !is.na(guess) & inches < 12 & between(guess, smallest, tallest) ~ guess, #feet'inches
+    TRUE ~ as.numeric(NA))) %>%
+  select(-guess)
+
+heights <- data.frame(sex = reported_heights$sex, height = new_heights$height)
 heights <- filter(heights, !is.na(height))
 
 ## balance it between male and female
