@@ -59,8 +59,8 @@ words_to_numbers <- function(s){
 fix_meters <- function(s) str_replace(s, "^([1-2])\\s*,\\s*(\\d+)$", "\\1\\.\\2")  
 
 ## Now convert all heights
-smallest <- 53
-tallest <- 83
+smallest <- 50
+tallest <- 84
 pattern <- "^(\\d)'(\\d\\.?\\d*)$" 
 new_heights <- reported_heights %>% 
   mutate(original = height, 
