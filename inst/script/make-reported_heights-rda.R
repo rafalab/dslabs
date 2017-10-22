@@ -31,17 +31,19 @@ reported_heights <- filter(reported_heights, sex%in%c("Male","Female")) %>%
 save(reported_heights, file = "data/reported_heights.rda")
               
 ### Now clean it up
-
 convert_format <- function(s){
-  s %>% str_to_lower() %>% str_trim() %>%
+  s %>%
     str_replace("feet|foot|ft", "'") %>% #convert feet symbols to '
-    str_replace_all("inches|''|\"|cm|and", "") %>%  #remove inches, cm symbols, and
-    str_replace("^([4-6])\\s*'?$", "\\1'0") %>% #convert x or x' to x'0
-    str_replace("^([4-6])\\s*[\\s|\\.|,]\\s*(\\d+)$", "\\1'\\2") %>% #x y x'y x.y to x'y
-    str_replace_all("\\s", "") #remove all white space
+    str_replace_all("inches|in|''|\"|cm|and", "") %>%  #remove inches and other symbols
+    str_replace("^([4-7])\\s*[,\\.\\s+]\\s*(\\d*)$", "\\1'\\2") %>% #change x.y, x,y x y
+    str_replace("^([56])'?$", "\\1'0") %>% #add 0 when missing
+    str_replace("^([12])\\s*,\\s*(\\d*)$", "\\1\\.\\2") %>% #change european decimal
+    str_trim() #remove extra space
 }
+
 words_to_numbers <- function(s){
-  str_to_lower(s) %>%  
+  s %>% 
+    str_to_lower() %>%  
     str_replace_all("zero", "0") %>%
     str_replace_all("one", "1") %>%
     str_replace_all("two", "2") %>%
@@ -56,15 +58,14 @@ words_to_numbers <- function(s){
     str_replace_all("eleven", "11")
 }
 
-fix_meters <- function(s) str_replace(s, "^([1-2])\\s*,\\s*(\\d+)$", "\\1\\.\\2")  
-
 ## Now convert all heights
+pattern <- "^([4-7])\\s*'\\s*(\\d+\\.?\\d*)$"
+
 smallest <- 50
 tallest <- 84
-pattern <- "^(\\d)'(\\d\\.?\\d*)$" 
 new_heights <- reported_heights %>% 
   mutate(original = height, 
-         height = words_to_numbers(height) %>% convert_format() %>% fix_meters()) %>%
+         height = words_to_numbers(height) %>% convert_format()) %>%
   extract(height, c("feet", "inches"), regex = pattern, remove = FALSE) %>% 
   mutate_at(c("height", "feet", "inches"), as.numeric) %>%
   mutate(guess = 12*feet + inches) %>%
