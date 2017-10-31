@@ -3,6 +3,7 @@
 \docType{data}
 \name{research_funding_rates}
 \alias{research_funding_rates}
+\alias{raw_data_research_funding_rates}
 \title{Gender bias in research funding in the Netherlands}
 \format{An object of class \code{"data.frame"}.}
 \source{
@@ -31,5 +32,8 @@ success_rates_women. Success rate for women.
 \examples{
 data(research_funding_rates)
 research_funding_rates
+# The raw data for this table is available from
+data(raw_data_research_funding_rates)
+
 }
 \keyword{datasets}
