@@ -12,11 +12,11 @@ The Trump Twitter Archive: \url{http://www.trumptwitterarchive.com}
 data(trump_tweets)
 }
 \description{
-All tweets from Donald Trump's twitter account from 2009 to 2017 composed on Android or iPhone
+All tweets from Donald Trump's twitter account from 2009 to 2017
 }
 \details{
 \itemize{
-source. Device used to compose tweet.
+source. Device or service used to compose tweet.
 id_str. Tweet ID.
 text. Tweet.
 created_at. Data and time tweet was tweeted.
