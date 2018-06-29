@@ -22,8 +22,9 @@ polls_2008 <- read_html(url) %>%
          Undecided=as.numeric(na_if(Undecided,"-"))/100,
          Margin = Obama - McCain,
          Day = as.numeric(start_date - mdy("11/04/2008"))) %>%
-  filter(start_date >= "2008-06-01") 
-names(polls_2008) <- tolower(names(polls_2008) )
+  filter(start_date >= "2008-06-01") %>%
+  group_by(day=Day)  %>% 
+  summarize(margin=mean(Margin))
 save(polls_2008, file = "data/polls_2008.rda", compress="xz")
 
 
