@@ -31,7 +31,7 @@ set.seed(1971)
 ind <- sample.int(length(index_27), 1000)
 labels <- y[ind]
 x <- x[ind, ]
-index_train <- createDataPartition(labels, p=0.5, list = FALSE)
+index_train <- createDataPartition(labels, p=0.8, list = FALSE)
 
 mnist_27 <- list(
   train = data.frame(y = factor(labels[index_train]),
