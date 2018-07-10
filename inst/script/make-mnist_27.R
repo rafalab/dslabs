@@ -48,4 +48,9 @@ save(mnist_27, file = "data/mnist_27.rda", compress="xz")
 
 # check
 #ggplot2::ggplot(mnist_27$true_p, aes(x_1, x_2, fill = p)) + geom_raster()+ scale_fill_gradientn(colors=c("#00BFC4","white","#F8766D"))
+
+
+
+
+
        
