@@ -17,7 +17,7 @@
 #'
 #' @docType data
 #'
-#' @usage data(olives)
+#' @usage data(olive)
 #'
 #' @format An object of class \code{"data.frame"}. 
 #'
@@ -27,6 +27,6 @@
 #' @source J. Zupan, and J. Gasteiger.  Neural Networks in Chemistry and Drug Design.
 #' 
 #' @examples
-#' data(olives)
-#' head(olives)
-"olives"
+#' data(olive)
+#' head(olive)
+"olive"
