@@ -1,4 +1,5 @@
 ## download data (takes a few minutes)
+library(tidyverse)
 url <- "http://files.grouplens.org/datasets/movielens/ml-latest-small.zip"
 td <- tempdir()
 print(td)
@@ -18,10 +19,8 @@ movielens_titles <- movielens_titles %>%
 
 movielens <- right_join(movielens_titles, movielens, by = "movieId")
 
-movielens_titles <- as.data.frame(movielens_titles)
 movielens <- as.data.frame(movielens)
-
-length(unique(movielens$userId))
+movielens$
 ## check
 #movielens  %>% group_by(movieId) %>% summarize(avg = mean(rating), n=n(), title= title[1]) %>% arrange(desc(avg))
 #movielens %>%  group_by(movieId) %>% summarize(avg = mean(rating), n=n(), title= title[1]) %>% filter(n>100) %>% arrange(desc(avg))
