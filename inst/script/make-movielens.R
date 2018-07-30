@@ -20,7 +20,7 @@ movielens_titles <- movielens_titles %>%
 movielens <- right_join(movielens_titles, movielens, by = "movieId")
 
 movielens <- as.data.frame(movielens)
-movielens$
+movielens$genres <- factor(movielens$genres)
 ## check
 #movielens  %>% group_by(movieId) %>% summarize(avg = mean(rating), n=n(), title= title[1]) %>% arrange(desc(avg))
 #movielens %>%  group_by(movieId) %>% summarize(avg = mean(rating), n=n(), title= title[1]) %>% filter(n>100) %>% arrange(desc(avg))

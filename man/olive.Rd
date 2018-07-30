@@ -16,9 +16,9 @@ Percentage composition of 8 fatty acids found in the lipid fraction of 572 Itali
 }
 \details{
 \itemize{
-\item region. General region of Italy 
+\item region. General region of Italy.
 \item area. Area of Italy. 
-\item palmitic. Percent of palmitic acidin sample. 
+\item palmitic. Percent of palmitic acid in sample. 
 \item palmitoleic. Percent of palmitoleic in sample. 
 \item stearic. Percent of stearic acid in sample.  
 \item oleic. Percent of oleic acid in sample.  

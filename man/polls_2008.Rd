@@ -17,7 +17,7 @@ in the 20008 presidential election.
 }
 \details{
 \itemize{
-\item day. Days to election until election day. Negative numbers are reported to show day is before the election.
+\item day. Days until election day. Negative numbers are reported so that days can increase up to 0, which is election day.
 \item margin. Average difference between Obama and McCain for that day.
 }
 }

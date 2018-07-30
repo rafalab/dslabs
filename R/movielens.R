@@ -9,7 +9,7 @@
 #' \item genres. Genres associated with the movies.
 #' \item userId. Unique ID for the user. 
 #' \item rating. A rating between 0 and 5 for the movie.
-#' \item timestap. Date and time the rating was given.
+#' \item timestamp. Date and time the rating was given.
 #' }
 #
 #' @docType data

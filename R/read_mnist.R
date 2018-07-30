@@ -5,13 +5,15 @@
 #'  
 #' @return A list with two components: train and test. Each of these is a list with two components: images and labels. The images component is a
 #' matrix with each column representing one of the 28*28 = 784 pixels. The values are integers between 0 and 255 representing grey scale. 
-#' The labels components is vector representing the digit shown in the image.
+#' The labels components is a vector representing the digit shown in the image.
 #'
-#' Note that the data being downloaded is over 200MB, so it make take several seconds depending on internet speed.
+#' Note that the data is over 200MB, so the download may take several seconds depending on internet speed.
 #' 
 #' @source http://yann.lecun.com/exdb/mnist/
 #' 
 #' @references Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. "Gradient-based learning applied to document recognition." Proceedings of the IEEE, 86(11):2278-2324, November 1998.  
+#' 
+#' @author Samuela Pollack, \email{spollack@jimmy.harvard.edu}
 #' 
 #' @examples
 #' # this can take several seconds, depending on internet speed.

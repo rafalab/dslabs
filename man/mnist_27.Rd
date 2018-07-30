@@ -13,7 +13,7 @@ data(mnist_27)
 }
 \description{
 We only include a randomly selected set of 2s and 7s along with the two predictors based on the 
-proportion of dark pixels in the upper left and lower right quandrants respectively. The dataset is divided into 
+proportion of dark pixels in the upper left and lower right quadrants respectively. The dataset is divided into 
 training and test sets.
 }
 \details{
@@ -22,8 +22,8 @@ training and test sets.
 \item test. A data frame containing  training data: labels and predictors.
 \item index_train. The index of the original mnist training data used for the training set.
 \item index_test. The index of the original mnist training data used for the test set.
-\item true_p. A \code{data.frame} with the probability the 
-two predictors x_1 and x_2 and the probability of of being a 7 given these values.
+\item true_p. A \code{data.frame} containing the 
+two predictors, x_1 and x_2, and the conditional probability of being a 7 for x_1, x_2.
 }
 }
 \examples{
