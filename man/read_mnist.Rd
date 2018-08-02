@@ -21,12 +21,14 @@ This function downloads the mnist training and test data from http://yann.lecun.
 }
 \examples{
 # this can take several seconds, depending on internet speed.
+\dontrun{
 mnist <- read_mnist()
 i <- 5
 image(1:28, 1:28, matrix(mnist$test$images[i,], nrow=28)[ , 28:1], 
     col = gray(seq(0, 1, 0.05)), xlab = "", ylab="")
 ## the labels for this image is: 
 mnist$test$labels[i]
+}
 
 }
 \references{
