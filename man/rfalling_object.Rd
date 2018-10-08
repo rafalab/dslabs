@@ -4,9 +4,9 @@
 \alias{rfalling_object}
 \title{Simulate falling object data}
 \usage{
-rfalling_object(n = 14, d_0 = 55.86, v_0 = 0, g = -9.8, scale = 1,
-  time = seq(0, 3.25, length.out = n), error_distribution = c("rnorm",
-  "rt"), df = 3)
+rfalling_object(n = 14, d_0 = 55.86, v_0 = 0, g = -9.8,
+  scale = 1, time = seq(0, 3.25, length.out = n),
+  error_distribution = c("rnorm", "rt"), df = 3)
 }
 \arguments{
 \item{n}{Sample size}
