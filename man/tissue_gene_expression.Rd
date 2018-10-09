@@ -12,8 +12,8 @@
 data(tissue_gene_expression)
 }
 \description{
-This is a subset of the data provided by the tissuesGeneExpression
-package available from the genomicsclass GitHub repository. 
+This is a subset of the data provided by the \code{tissuesGeneExpression}
+package available from the \code{genomicsclass} GitHub repository. 
 The predictors are gene expression measurements from 500 genes that
 are a random subset of the original 22,215.
 }

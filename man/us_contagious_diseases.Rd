@@ -12,10 +12,10 @@
 data(us_contagious_diseases)
 }
 \description{
-Yearly counts for Hepatitis A, Measles, Mumps, Pertussis, Polio,  Rubella, and Small for US states. Original data courtesy of Tycho Project (http://www.tycho.pitt.edu/).
+Yearly counts for Hepatitis A, Measles, Mumps, Pertussis, Polio,  Rubella, and Smallpox for US states. Original data courtesy of Tycho Project (http://www.tycho.pitt.edu/).
 }
 \details{
-#' \itemize{
+\itemize{
  \item disease. A factor containing disease names.
  \item state. A factor containing state names.
  \item year. 

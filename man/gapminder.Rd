@@ -11,7 +11,8 @@
 data(gapminder)
 }
 \description{
-Health and income outcomes for 184 countries from 1960 to 2016. Also includes two character vectors, oecd and opec, with the names of OECD and OPEC countries from 2016.
+Health and income outcomes for 184 countries from 1960 to 2016. Also includes two character vectors, \code{oecd} 
+and \code{opec}, with the names of OECD and OPEC countries from 2016.
 }
 \details{
 \itemize{

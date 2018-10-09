@@ -1,11 +1,12 @@
 #' Simulate falling object data
 #'
-#' The function simulates a falling object measurements. Default parameters are for dropping an weight from the tower of Pisa
+#' The function simulates a falling object's position. Default parameters are for dropping a 
+#' weight from the tower of Pisa.
 #'
 #' @param n Sample size
 #' @param d_0 Height from which object will fall in meters.
 #' @param v_0 Initial velocity with which object will fall in meters per second.
-#' @param g Gravitational constnant, 9.8 meters per second per seonnd
+#' @param g Gravitational constant, 9.8 meters per second per seonnd
 #' @param scale The measurement errors will be multiplied by this constant.
 #' @param time Numeric vector of times, in seconds, at which measurements were taken.
 #' @param error_distribution Character. Either \code{rnorm} for normal or \code{rt} for t-distribution.

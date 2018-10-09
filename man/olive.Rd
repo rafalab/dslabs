@@ -12,20 +12,20 @@ J. Zupan, and J. Gasteiger.  Neural Networks in Chemistry and Drug Design.
 data(olive)
 }
 \description{
-Percentage composition of 8 fatty acids found in the lipid fraction of 572 Italian olive oils
+Composition in percentage of eight fatty acids found in the lipid fraction of 572 Italian olive oils
 }
 \details{
 \itemize{
 \item region. General region of Italy.
 \item area. Area of Italy. 
-\item palmitic. Percent of palmitic acid in sample. 
-\item palmitoleic. Percent of palmitoleic in sample. 
-\item stearic. Percent of stearic acid in sample.  
-\item oleic. Percent of oleic acid in sample.  
-\item linoleic. Percent of linoleic acid in sample.  
-\item linolenic. Percent of linolenic acid in sample.  
-\item arachidic. Percent of arachidic acid in sample.  
-\item eicosenoic. Percent of eicosenoic acid in sample.  
+\item palmitic. Percent palmitic acid of sample. 
+\item palmitoleic. Percent palmitoleic of sample. 
+\item stearic. Percent stearic acid of sample.  
+\item oleic. Percent oleic acid of sample.  
+\item linoleic. Percent linoleic acid of sample.  
+\item linolenic. Percent linolenic acid of sample.  
+\item arachidic. Percent arachidic acid of sample.  
+\item eicosenoic. Percent eicosenoic acid of sample.  
 }
 }
 \examples{

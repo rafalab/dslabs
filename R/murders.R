@@ -1,6 +1,6 @@
 #' US gun murders by state for 2010
 #' 
-#' Gun murder data are from FBI reports. Also contains the population of each state.
+#' Gun murder data from FBI reports. Also contains the population of each state.
 #'
 #' \itemize{
 #'  \item state. US state

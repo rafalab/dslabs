@@ -1,6 +1,6 @@
 #' Self-reported Heights 
 #' 
-#' Students were asked to report their height in inches and sex in an online form. 
+#' Students were asked to report their height (in inches) and sex in an online form. 
 #' This table includes the results from four courses.
 #'
 #'\itemize{

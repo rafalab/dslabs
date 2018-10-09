@@ -5,9 +5,9 @@
 #' 
 #'
 #' \itemize{
-#' divorce_rate_maine. Divorce per 1000 in Maine.
-#' margarine_consumption_per_capita. US per capita consumption of margarine in pounds.
-#' year. Year.
+#'   \item divorce_rate_maine. Divorce per 1000 in Maine.
+#'   \item margarine_consumption_per_capita. US per capita consumption of margarine in pounds.
+#'   \item year. Year.
 #' }
 #'
 #' @docType data
@@ -18,7 +18,9 @@
 #'
 #' @keywords datasets
 #'
-#' @source \url{http://www.tylervigen.com/spurious-correlations}{Spurious Correlations}
+#' @source \href{http://www.tylervigen.com/spurious-correlations}{Spurious Correlations}
+#'
+#' @examples
 #' data(divorce_margarine)
 #' with(divorce_margarine, plot(argarine_consumption_per_capita, divorce_rate_maine))
 "divorce_margarine"
