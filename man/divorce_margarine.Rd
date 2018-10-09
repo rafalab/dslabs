@@ -6,9 +6,7 @@
 \title{Divorce rate and margarine consumption data}
 \format{An object of class \code{"data.frame"}.}
 \source{
-\url{http://www.tylervigen.com/spurious-correlations}{Spurious Correlations}
-data(divorce_margarine)
-with(divorce_margarine, plot(argarine_consumption_per_capita, divorce_rate_maine))
+\href{http://www.tylervigen.com/spurious-correlations}{Spurious Correlations}
 }
 \usage{
 data(divorce_margarine)
@@ -18,9 +16,13 @@ Divorce rates in Maine and per capita consumption of margarine in US data
 }
 \details{
 \itemize{
-divorce_rate_maine. Divorce per 1000 in Maine.
-margarine_consumption_per_capita. US per capita consumption of margarine in pounds.
-year. Year.
+  \item divorce_rate_maine. Divorce per 1000 in Maine.
+  \item margarine_consumption_per_capita. US per capita consumption of margarine in pounds.
+  \item year. Year.
 }
+}
+\examples{
+data(divorce_margarine)
+with(divorce_margarine, plot(argarine_consumption_per_capita, divorce_rate_maine))
 }
 \keyword{datasets}

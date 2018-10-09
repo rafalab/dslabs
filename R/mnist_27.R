@@ -1,4 +1,4 @@
-#' Example useful for illustrating machine learning algorithms based on MNIST data
+#' Useful example for illustrating machine learning algorithms based on MNIST data
 #' 
 #' We only include a randomly selected set of 2s and 7s along with the two predictors based on the 
 #' proportion of dark pixels in the upper left and lower right quadrants respectively. The dataset is divided into 
@@ -7,11 +7,12 @@
 #'
 #' \itemize{
 #' \item train. A data frame containing  training data: labels and predictors.
-#' \item test. A data frame containing  training data: labels and predictors.
+#' \item test. A data frame containing  test data: labels and predictors.
 #' \item index_train. The index of the original mnist training data used for the training set.
-#' \item index_test. The index of the original mnist training data used for the test set.
+#' \item index_test. The index of the original mnist test data used for the test set.
 #' \item true_p. A \code{data.frame} containing the 
-#' two predictors, x_1 and x_2, and the conditional probability of being a 7 for x_1, x_2.
+#' two predictors \code{x_1} and \code{x_2} and the conditional probability of being a 7 
+#' for \code{x_1}, \code{x_2}.
 #' }
 #' 
 #
@@ -25,9 +26,6 @@
 #'
 #'
 #' @source \href{http://yann.lecun.com/exdb/mnist/}{http://yann.lecun.com/exdb/mnist/}
-#'
-#'
-#' 
 #'
 #' @examples
 #' data(mnist_27)

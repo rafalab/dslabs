@@ -12,7 +12,7 @@
 data(murders)
 }
 \description{
-Gun murder data are from FBI reports. Also contains the population of each state.
+Gun murder data from FBI reports. Also contains the population of each state.
 }
 \details{
 \itemize{

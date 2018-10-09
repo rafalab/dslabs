@@ -17,16 +17,16 @@ Table S1 from paper title "Gender contributes to personal research funding succe
 }
 \details{
 \itemize{
-discipline. Research area discipline.
-applications_total. Total applications.
-applications_men. Total applications by men.
-applications_women. Total applications by women.
-awards_total. Total awards.
-awards_men. Total awards received by men.
-awards_women. Total awards received by women.
-success_rates_total. Overall success rate.
-success_rates_men. Success rate for men.
-success_rates_women. Success rate for women.
+  \item discipline. Research area discipline.
+  \item applications_total. Total applications.
+  \item applications_men. Total applications by men.
+  \item applications_women. Total applications by women.
+  \item awards_total. Total awards.
+  \item awards_men. Total awards received by men.
+  \item awards_women. Total awards received by women.
+  \item success_rates_total. Overall success rate.
+  \item success_rates_men. Success rate for men.
+  \item success_rates_women. Success rate for women.
 }
 }
 \examples{

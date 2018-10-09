@@ -1,7 +1,7 @@
 #' Poll data for popular vote in 2008 presidential election
 #' 
 #' Data from different pollsters for the popular vote between Obama and McCain 
-#' in the 20008 presidential election.  
+#' in the 2008 presidential election.  
 #'  
 #'
 #' \itemize{
@@ -18,7 +18,8 @@
 #' @keywords datasets
 #'
 #'
-#' @source \href{https://web.archive.org/web/20160309010059/http://www.pollster.com/08USPresGEMvO-2.html}{https://web.archive.org/web/20160309010059/http://www.pollster.com/08USPresGEMvO-2.html}
+#' @source \href{https://web.archive.org/web/20160309010059/}{https://web.archive.org/web/20160309010059/}
+#' \href{http://www.pollster.com/08USPresGEMvO-2.html}{http://www.pollster.com/08USPresGEMvO-2.html}
 #'
 #' @examples
 #' data(polls_2008)
