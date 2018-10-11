@@ -23,6 +23,6 @@ Divorce rates in Maine and per capita consumption of margarine in US data
 }
 \examples{
 data(divorce_margarine)
-with(divorce_margarine, plot(argarine_consumption_per_capita, divorce_rate_maine))
+with(divorce_margarine, plot(margarine_consumption_per_capita, divorce_rate_maine))
 }
 \keyword{datasets}

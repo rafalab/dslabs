@@ -22,5 +22,5 @@
 #'
 #' @examples
 #' data(divorce_margarine)
-#' with(divorce_margarine, plot(argarine_consumption_per_capita, divorce_rate_maine))
+#' with(divorce_margarine, plot(margarine_consumption_per_capita, divorce_rate_maine))
 "divorce_margarine"
