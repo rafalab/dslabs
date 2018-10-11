@@ -6,8 +6,7 @@
 \title{Poll data for popular vote in 2008 presidential election}
 \format{An object of class \code{data.frame}.}
 \source{
-\href{https://web.archive.org/web/20160309010059/}{https://web.archive.org/web/20160309010059/}
-\href{http://www.pollster.com/08USPresGEMvO-2.html}{http://www.pollster.com/08USPresGEMvO-2.html}
+\href{https://web.archive.org/web/20161108190914/http://www.pollster.com/08USPresGEMvO-2.html}{https://web.archive.org/web/20161108190914/http://www.pollster.com/08USPresGEMvO-2.html}
 }
 \usage{
 data(polls_2008)
