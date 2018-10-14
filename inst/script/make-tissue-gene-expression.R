@@ -19,9 +19,10 @@ colnames(e) <- paste(tissue,
                      unlist(
                        sapply(table(tissue), function(n) 1:n)), 
                      sep="_")
-ind <- which(!is.na(map))
+## pick featuers with a gene name and make sure they are unique
+ind <- which(!is.na(map) & !duplicated(map))
 
-set.seed(347)
+set.seed(1994)
 e <- e[sample(ind, 500), ]
 
 tissue_gene_expression <- list(x = t(e), y = factor(tissue))
@@ -33,7 +34,9 @@ save(tissue_gene_expression,
 ### test
 if(FALSE){
   library(caret)
-  ind <- which(colMeans(tissue_gene_expression$x) > 0.5)
+  ind <- which(matrixStats::colSds(tissue_gene_expression$x) > 0.5)
+  tissue_gene_expression$x <- with(tissue_gene_expression,
+                                   sweep(x, 1, rowMeans(x)))
   fit <- train(tissue_gene_expression$x[,ind],
                tissue_gene_expression$y, method = "knn",
                tuneGrid = data.frame(k=seq(1,7,2)))
