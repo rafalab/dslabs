@@ -30,5 +30,7 @@ results_us_election_2016 <-
              others=as.numeric(gsub("%","",tmp[[9]])),
              stringsAsFactors = FALSE) %>%
   mutate(state = ifelse(state == "Washington, D.C.", "District of Columbia", state))
-  
+
+## we reorder for illustrate how join works
+results_us_election_2016 <- results_us_election_2016 %>% arrange(desc(electoral_votes))  
 save(polls_us_election_2016, results_us_election_2016, file = "data/polls_us_election_2016.rda", compress="xz")
