@@ -3,7 +3,7 @@
 \docType{data}
 \name{nyc_regents_scores}
 \alias{nyc_regents_scores}
-\title{NYC regents exams scores 2010}
+\title{NYC Regents exams scores 2010}
 \format{An object of class \code{"data.frame"}.}
 \source{
 New York City Department of Education via Amanda Cox.
@@ -12,12 +12,12 @@ New York City Department of Education via Amanda Cox.
 data(nyc_regents_scores)
 }
 \description{
-Distribution of scores for New York City regents algebra, global history, biology, English, and U.S. history exams. 
-These data were used to make \href{http://graphics8.nytimes.com/images/2011/02/19/nyregion/19schoolsch/19schoolsch-popup.gif}{this New York Times plot}
+Distribution of scores for New York City Regents algebra, global history, biology, English, and U.S. history exams. 
+These data were used to make \href{http://graphics8.nytimes.com/images/2011/02/19/nyregion/19schoolsch/19schoolsch-popup.gif}{this New York Times plot}.
 }
 \details{
 \itemize{
-\item score. Tests score from 0 to 100.
+\item score. Test score from 0 to 100.
  \item integrated_algebra. Score frequency on Algebra exam.
  \item global_history. Score frequency on global history exam.
  \item living_environment.  Score frequency on biology exam.
