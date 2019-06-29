@@ -1,0 +1,25 @@
+#' 2015 US Period Life Table
+#' 
+#' Probability of death within 1 year by age and sex in the United States in 2015.
+#' 
+#'
+#' \itemize{
+#'  \item Age. Age strata, with each year a different stratum.
+#'  \item Sex. Male or Female.
+#'  \item DeathProb. Probability of death within 1 year given exact age and sex.
+#' }
+#'
+#' @docType data
+#'
+#' @usage data(death_prob)
+#'
+#' @format An object of class \code{"data.frame"}. 
+#'
+#' @keywords datasets
+#'
+#'
+#' @source \href{https://www.ssa.gov/oact/STATS/table4c6.html}{Social Security Administraton}
+#' @examples
+#' data(death_prob)
+#' head(death_prob)
+"death_prob"
