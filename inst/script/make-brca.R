@@ -25,4 +25,4 @@ type <- brca_nuclei$type
 # combine features and type into brca object
 brca <- list(x = features, y = type)
 
-save(brca, file = "brca.rda", compress = "xz")
+save(brca, file = "data/brca.rda", compress = "xz")

@@ -4,9 +4,9 @@
 #'
 #'
 #' \itemize{
-#'  \item Year. Year (CE).
-#'  \item Gas. Gas being measured: carbon dioxide (`CO2`), methane (`CH4`) or nitrous oxide (`N2O`). 
-#'  \item Concentration. Gas concentration in ppm by volume (`CO2`) or ppb by volume (`CH4`, `N2O`).
+#'  \item year. Year (CE).
+#'  \item gas. Gas being measured: carbon dioxide (`CO2`), methane (`CH4`) or nitrous oxide (`N2O`). 
+#'  \item concentration. Gas concentration in ppm by volume (`CO2`) or ppb by volume (`CH4`, `N2O`).
 #' }
 #'
 #' @docType data

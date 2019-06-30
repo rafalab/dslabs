@@ -4,9 +4,9 @@
 #' 
 #'
 #' \itemize{
-#'  \item Age. Age strata, with each year a different stratum.
-#'  \item Sex. Male or Female.
-#'  \item DeathProb. Probability of death within 1 year given exact age and sex.
+#'  \item age. Age strata, with each year a different stratum.
+#'  \item sex. Male or Female.
+#'  \item prob. Probability of death within 1 year given exact age and sex.
 #' }
 #'
 #' @docType data
