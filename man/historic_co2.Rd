@@ -16,9 +16,9 @@ Concentration of carbon dioxide in ppm by volume from direct measurements at Mau
 }
 \details{
 \itemize{
- \item Year. Year (CE).
- \item CO2. Carbon dioxide concentration in ppm by volume.
- \item Source. Source of carbon dioxide measurement: direct CO2 annual mean concentrations from Mauna Loa (`Mauna Loa`) or indirect CO2 concentrations from air trapped in ice cores (`Ice Cores`).
+ \item year. Year (CE).
+ \item co2. Carbon dioxide concentration in ppm by volume.
+ \item source. Source of carbon dioxide measurement: direct CO2 annual mean concentrations from Mauna Loa (`Mauna Loa`) or indirect CO2 concentrations from air trapped in ice cores (`Ice Cores`).
 }
 }
 \examples{

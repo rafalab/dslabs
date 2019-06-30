@@ -4,7 +4,7 @@
 #'
 #'
 #' \itemize{
-#'  \item star. 
+#'  \item star. Name of star.
 #'  \item magnitude. Absolute magnitude of the star, which is a function of the star's luminosity and distance to the star.
 #'  \item temp. Surface temperature in degrees Kelvin (K).
 #'  \item type. Spectral class of star in the OBAFGKM system.
