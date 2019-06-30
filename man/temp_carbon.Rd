@@ -16,11 +16,11 @@ Annual mean global temperature anomaly on land, sea and combined, 1880-2018. Ann
 }
 \details{
 \itemize{
- \item Year. Year (CE).
- \item Temp_Anomaly. Global annual mean temperature anomaly in degrees Celsius relative to the 20th century mean temperature. 1880-2018. 
- \item Land_Anomaly. Annual mean temperature anomaly on land in degrees Celsius relative to the 20th century mean temperature. 1880-2018.
- \item Ocean_Anomaly. Annual mean temperature anomaly over ocean in degrees Celsius relative to the 20th century mean temperature. 1880-2018.
- \item Carbon_Emissions. Annual carbon emissions in millions of metric tons of carbon. 1751-2014.
+ \item year. Year (CE).
+ \item temp_anomaly. Global annual mean temperature anomaly in degrees Celsius relative to the 20th century mean temperature. 1880-2018. 
+ \item land_anomaly. Annual mean temperature anomaly on land in degrees Celsius relative to the 20th century mean temperature. 1880-2018.
+ \item ocean_anomaly. Annual mean temperature anomaly over ocean in degrees Celsius relative to the 20th century mean temperature. 1880-2018.
+ \item carbon_emissions. Annual carbon emissions in millions of metric tons of carbon. 1751-2014.
 }
 }
 \examples{
