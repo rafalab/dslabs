@@ -1,6 +1,6 @@
 Package: dslabs
 Title: Data Science Labs
-Version: 0.7.0
+Version: 0.7.1
 Description: Datasets and functions that can be used for data analysis practice, homework and projects in data science courses and workshops. 26 datasets are available for case studies in data visualization, statistical inference, modeling, linear regression, data wrangling and machine learning.
 Author: Rafael A. Irizarry, Amy Gill
 Maintainer: Rafael A. Irizarry <rafa@jimmy.harvard.edu>
