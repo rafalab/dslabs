@@ -32,5 +32,8 @@ temp_carbon <- full_join(temps, Carbon_Emissions)
 # remove temporary objects
 rm(Carbon_Emissions, temps, land_temps, ocean_temps, url)
 
+# make data frame
+temp_carbon <- as.data.frame(temp_carbon)
+
 # save to rda
 save(temp_carbon, file = "data/temp_carbon.rda", compress = "xz")
