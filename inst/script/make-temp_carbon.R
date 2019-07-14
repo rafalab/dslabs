@@ -16,8 +16,8 @@ ocean_temps <- read_csv(url, skip = 4)
 colnames(ocean_temps) <- c("year", "ocean_anomaly")
 
 # combine temperature anomaly data
-temps <- left_join(temps, land_temps)
-temps <- left_join(temps, ocean_temps)
+temps <- left_join(temps, land_temps, by = "year")
+temps <- left_join(temps, ocean_temps, by = "year")
 
 # import CO2 emissions data from CDIAC - selected columns were manually removed before import to avoid parsing failures
 # original data: https://cdiac.ess-dive.lbl.gov/trends/emis/tre_glob_2014.html
@@ -27,7 +27,7 @@ Carbon_Emissions <- read_csv("inst/extdata/carbon_emissions.csv")
 names(Carbon_Emissions) <- c("year","carbon_emissions")
 
 # merge temps, Carbon_Emissions
-temp_carbon <- full_join(temps, Carbon_Emissions)
+temp_carbon <- full_join(temps, Carbon_Emissions, by = "year")
 
 # remove temporary objects
 rm(Carbon_Emissions, temps, land_temps, ocean_temps, url)
