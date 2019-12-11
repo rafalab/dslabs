@@ -3,7 +3,7 @@ Title: Data Science Labs
 Version: 0.7.2
 Description: Datasets and functions that can be used for data analysis practice, homework and projects in data science courses and workshops. 26 datasets are available for case studies in data visualization, statistical inference, modeling, linear regression, data wrangling and machine learning.
 Author: Rafael A. Irizarry, Amy Gill
-Maintainer: Rafael A. Irizarry <rafa@jimmy.harvard.edu>
+Maintainer: Rafael A. Irizarry <rafael_irizarry@dfci.harvard.edu>
 Depends:
     R (>= 3.1.2)
 Imports: ggplot2
