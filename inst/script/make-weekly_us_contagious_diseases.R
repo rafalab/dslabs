@@ -1,61 +1,48 @@
-library(readxl)
 library(tidyverse)
 library(stringr)
-### To create this RDA you need access to the file tycho-us-infectious-disease-data.xlsx
-### Which is currently not available from the web
+### To create this RDA you need access to the file ProjectTycho_Level1_v1.0.0.csv
+### Which is currently available only after opening an account here: https://www.tycho.pitt.edu/
+### And downloading from Level 1 Data here: https://www.tycho.pitt.edu/data/#datasets
 ### Once you have this file set path to the path of the file:
-path <- "/Users/ririzarr/myDocuments/teaching/data-science/labs/vaccines/data"
+path <- "/Users/rafa/myDocuments/teaching/data-science/labs/vaccines/data"
 
 ### Read in tables
-filename <- file.path(path,"tycho-us-infectious-disease-data.xlsx")
-sheet_names <- excel_sheets(filename)
-tables <- lapply(sheet_names, function(sheet) read_excel(filename, sheet = sheet, skip = 2, na = "-"))
-names(tables) <- gsub(" ", "_", sheet_names)
-
-## check if column names the same
-tmp = sapply(tables, names)
-if(!all(apply(tmp[,-1], 2, function(x) identical(tmp[,1], x)))) stop("column names not the same")
-
+filename <- file.path(path, "ProjectTycho_Level1_v1.0.0.csv")
+the_diseases <- c("Hepatitis A", "Measles", "Mumps", "Pertussis", "Polio", "Rubella", "Smallpox")
 ### Tidy each table
-tables <- lapply(seq_along(tables), function(i) gather(tables[[i]], state, count, -YEAR, -WEEK) %>% mutate(disease = sheet_names[i]) %>%
-                   .[,c(5,1:4)] %>%
-                   mutate(state = str_to_title(state)))
+us_contagious_diseases <- read_csv(filename, na = "\\N") %>%
+  distinct() %>% ## removing duplicate rows
+  mutate(disease = str_to_title(disease)) %>% 
+  filter(disease %in% the_diseases) %>%
+  mutate(loc = factor(str_to_title(loc))) %>%
+  mutate(year = floor(epi_week/100)) %>%
+  mutate(week = epi_week - year*100) %>%
+  group_by(disease, loc, year) %>% 
+  summarize(weeks_reporting = sum(!is.na(cases)), count = sum(cases, na.rm=TRUE)) %>%
+  ungroup() %>%
+  group_by(disease) %>%
+  complete(loc, year, fill = list(weeks_reporting = 0, count = 0)) %>%
+  rename(state = loc)
 
-## Combine into one big table
-weekly_us_contagious_diseases <- Reduce(rbind,tables)
-names(weekly_us_contagious_diseases  ) <- tolower(names(weekly_us_contagious_diseases  ))
-weekly_us_contagious_diseases   <- weekly_us_contagious_diseases   %>% 
-  mutate(state = str_to_title(state)) 
-
-### Now get the population data from historydaata package
 library("historydata")
-data(us_state_populations)
-
+### Now get the population data from historydaata package
 ## Function to interpolate population  between census years using a spline
-interpolate_population <- function(state, xout){
-  tmp <- us_state_populations[us_state_populations$state == state,] 
-  min_year <- min(tmp$year)
-  res <-with(tmp,round(exp(spline(year, log(population), method = "natural", xout = xout)$y)))
-  res[xout<min_year] <- NA ## don't extrapolate to the past, state didnt exist  
-  res
-}
+M <- max(us_contagious_diseases$year)
+us_state_populations_ext <- 
+  purrr::map_df(levels(us_contagious_diseases$state), function(x){
+    dat <- filter(us_state_populations, state == x)
+    data.frame(state = I(x),
+             year = seq(min(dat$year), M),
+             population = round(exp(spline(dat$year, log(dat$population), method = "natural",
+                                                        xout = seq(min(dat$year), M))$y)))
+}) %>% 
+  mutate(state = factor(state))
 
 ## Add population data to disease tidy table
-weekly_us_contagious_diseases <- weekly_us_contagious_diseases %>% 
-  group_by(state, disease) %>%
-  mutate(time  = year + (week-1)/max(week)) %>%
-  mutate(population = interpolate_population(state[1], time)) %>% 
-  select(-time) %>%
-  ungroup()
-
-### Now take the totals for each year and the population at the start of the year
-us_contagious_diseases <- weekly_us_contagious_diseases %>%
-  group_by(disease, state, year) %>% arrange(year) %>%
-  summarize(weeks_reporting = sum(!is.na(count)), count = sum(count, na.rm=TRUE),  population = population[1])
+us_contagious_diseases <- left_join(us_contagious_diseases, us_state_populations_ext, by = c("state","year"))
 
 ### turn into data frame and make some columns into factors
 us_contagious_diseases <- data.frame(us_contagious_diseases)
-us_contagious_diseases$state <- factor(us_contagious_diseases$state)
 us_contagious_diseases$disease <- factor(us_contagious_diseases$disease)
 
-save(us_contagious_diseases, file = "data/us_contagious_diseases.rda", compress="xz")
+save(us_contagious_diseases, file = "data/us_contagious_diseases.rda", compress="xz", version = 2)
