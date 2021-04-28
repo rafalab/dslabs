@@ -4,7 +4,9 @@
 \name{outlier_example}
 \alias{outlier_example}
 \title{Adult male heights in feet with outliers}
-\format{An object of class \code{"numeric"}.}
+\format{
+An object of class \code{"numeric"}.
+}
 \usage{
 data(outlier_example)
 }

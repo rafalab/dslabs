@@ -4,7 +4,9 @@
 \name{greenhouse_gases}
 \alias{greenhouse_gases}
 \title{Greenhouse gas concentrations over 2000 years}
-\format{An object of class \code{"data.frame"}.}
+\format{
+An object of class \code{"data.frame"}.
+}
 \source{
 MacFarling Meure et al. 2006 via \href{https://www.ncdc.noaa.gov/paleo-search/study/9959}{NOAA}.
 }

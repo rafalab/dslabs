@@ -4,7 +4,9 @@
 \name{divorce_margarine}
 \alias{divorce_margarine}
 \title{Divorce rate and margarine consumption data}
-\format{An object of class \code{"data.frame"}.}
+\format{
+An object of class \code{"data.frame"}.
+}
 \source{
 \href{http://www.tylervigen.com/spurious-correlations}{Spurious Correlations}
 }

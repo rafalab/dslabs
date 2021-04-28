@@ -5,7 +5,9 @@
 \alias{polls_us_election_2016}
 \alias{results_us_election_2016}
 \title{Fivethirtyeight 2016 Poll Data}
-\format{An object of class \code{"data.frame"}.}
+\format{
+An object of class \code{"data.frame"}.
+}
 \source{
 \href{https://docs.google.com/spreadsheets/d/1zxyOQDjNOJS_UkzerorUCf2OAdcMcIQEwRciKuYBIZ4/pubhtml?widget=true&headers=false#gid=658726802}{Ballotpedia}
 }

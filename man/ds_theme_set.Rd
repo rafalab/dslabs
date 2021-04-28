@@ -4,8 +4,13 @@
 \alias{ds_theme_set}
 \title{dslabs theme set}
 \usage{
-ds_theme_set(new = "theme_bw", args = NULL, base_size = 11,
-  bold_title = TRUE, ...)
+ds_theme_set(
+  new = "theme_bw",
+  args = NULL,
+  base_size = 11,
+  bold_title = TRUE,
+  ...
+)
 }
 \arguments{
 \item{new}{a prebuilt ggplot2 theme. Defaults to \code{"theme_minimal"}}

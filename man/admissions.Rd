@@ -4,7 +4,9 @@
 \name{admissions}
 \alias{admissions}
 \title{Gender bias among graduate school admissions to UC Berkeley.}
-\format{An object of class \code{"data.frame"}.}
+\format{
+An object of class \code{"data.frame"}.
+}
 \source{
 PJ Bickel, EA Hammel, and JW O'Connell. Science (1975)
 }

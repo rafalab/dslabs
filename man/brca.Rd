@@ -4,7 +4,9 @@
 \name{brca}
 \alias{brca}
 \title{Breast Cancer Wisconsin Diagnostic Dataset from UCI Machine Learning Repository}
-\format{An object of class \code{list}.}
+\format{
+An object of class \code{list}.
+}
 \source{
 \href{http://mlr.cs.umass.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)}{UCI Machine Learning Repository}
 }
@@ -20,6 +22,7 @@ biopsy slides. Features correspond to properties of cell nuclei, such as size, s
 The mean, standard error, and worst value of each of 10 nuclear parameters is reported for a total of 30 features.
 
 This is a classic dataset for training and benchmarking machine learning algorithms.
+
 
 \itemize{
 \item y. The outcomes. A factor with two levels denoting whether a mass is malignant ("M") or benign ("B").

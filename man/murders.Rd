@@ -4,7 +4,9 @@
 \name{murders}
 \alias{murders}
 \title{US gun murders by state for 2010}
-\format{An object of class \code{"data.frame"}.}
+\format{
+An object of class \code{"data.frame"}.
+}
 \source{
 \href{https://en.wikipedia.org/wiki/Murder_in_the_United_States_by_state}{Wikipedia}
 }

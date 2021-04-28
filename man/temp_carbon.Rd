@@ -4,7 +4,9 @@
 \name{temp_carbon}
 \alias{temp_carbon}
 \title{Global temperature anomaly and carbon emissions, 1751-2018}
-\format{An object of class \code{"data.frame"}.}
+\format{
+An object of class \code{"data.frame"}.
+}
 \source{
 \href{https://www.ncdc.noaa.gov/cag/global/time-series}{NOAA} and Boden, T.A., G. Marland, and R.J. Andres (2017) via \href{https://cdiac.ess-dive.lbl.gov/trends/emis/tre_glob_2014.html}{CDIAC}
 }

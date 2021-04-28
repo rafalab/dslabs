@@ -4,7 +4,9 @@
 \name{reported_heights}
 \alias{reported_heights}
 \title{Self-reported Heights}
-\format{An object of class \code{"data.frame"}.}
+\format{
+An object of class \code{"data.frame"}.
+}
 \usage{
 data(reported_heights)
 }

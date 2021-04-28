@@ -4,7 +4,9 @@
 \name{na_example}
 \alias{na_example}
 \title{Count data with some missing values}
-\format{An object of class \code{"integer"}.}
+\format{
+An object of class \code{"integer"}.
+}
 \usage{
 data(na_example)
 }

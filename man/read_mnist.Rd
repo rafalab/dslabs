@@ -7,20 +7,40 @@
 http://yann.lecun.com/exdb/mnist/
 }
 \usage{
-read_mnist()
+read_mnist(
+  path = NULL,
+  download = FALSE,
+  destdir = tempdir(),
+  url = "https://www2.harvardx.harvard.edu/courses/IDS_08_v2_03/",
+  keep.files = TRUE
+)
+}
+\arguments{
+\item{path}{A character giving the full path of the directory to look for files. It assumes the filenames are the same as the originals. If path is \code{NULL} a download or direct read of the files is attempted.}
+
+\item{download}{If \code{TRUE} the files will be downloaded and saved in detsdir.}
+
+\item{destdir}{A character giving the full path of the directory in which to save the downloaded files. The default is to use a temporary directory.}
+
+\item{url}{A character giving the URL from which to download files. Currently a copy of the data is available at https://www2.harvardx.harvard.edu/courses/IDS_08_v2_03/, the current default URL.}
+
+\item{keep.files}{A logical. If \code{TRUE} the downloaded files will be saved in \code{destdir}. If \code{FALSE} the entire directory is erased. This argument is ignored if \code{download} is \code{FALSE}.){
+}}
 }
 \value{
 A list with two components: train and test. Each of these is a list with two components: images and labels. The images component is a
 matrix with each column representing one of the 28*28 = 784 pixels. The values are integers between 0 and 255 representing grey scale. 
 The labels components is a vector representing the digit shown in the image.
 
-Note that the data is over 200MB, so the download may take several seconds depending on internet speed.
+Note that the data is over 10MB, so the download may take several seconds depending on internet speed. If you plan to load the data more than once
+we recommend you download the data once and read it from disk in the future. See examples.
 }
 \description{
-This function downloads the mnist training and test data from http://yann.lecun.com/exdb/mnist/
+This function downloads the mnist training and test data available here http://yann.lecun.com/exdb/mnist/
 }
 \examples{
 # this can take several seconds, depending on internet speed.
+
 \dontrun{
 mnist <- read_mnist()
 i <- 5
@@ -30,10 +50,19 @@ image(1:28, 1:28, matrix(mnist$test$images[i,], nrow=28)[ , 28:1],
 mnist$test$labels[i]
 }
 
+# You can download and save the data to a directory like this:
+\dontrun{
+mnist <- read_mnist(download = TRUE, destdir = "~/Downloads")
+
+# and then, going forward, read from disk 
+mnist <- read_mnist("~/Downloads")
+}
 }
 \references{
 Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. "Gradient-based learning applied to document recognition." Proceedings of the IEEE, 86(11):2278-2324, November 1998.
 }
 \author{
-Samuela Pollack, \email{spollack@jimmy.harvard.edu}
+Samuela Pollack
+
+Rafael A. Irizarry, \email{rafael_irizarry@dfci.harvard.edu}
 }

@@ -4,7 +4,9 @@
 \name{tissue_gene_expression}
 \alias{tissue_gene_expression}
 \title{Gene expression profiles for 189 biological samples taken from seven different tissue types.}
-\format{An object of class \code{list}.}
+\format{
+An object of class \code{list}.
+}
 \source{
 \href{https://github.com/genomicsclass/tissuesGeneExpression}{https://github.com/genomicsclass/tissuesGeneExpression}
 }
@@ -20,6 +22,7 @@ are a random subset of the original 22,215.
 \details{
 The example dataset is recommended for illustrating
 clustering and machine learning techniques.
+
 
 \itemize{
 \item x. The predictors composed of 500 genes. Each row is a gene expression profile and each column is different gene. The column names are the gene symbols.

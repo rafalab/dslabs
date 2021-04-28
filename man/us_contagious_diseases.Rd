@@ -4,7 +4,9 @@
 \name{us_contagious_diseases}
 \alias{us_contagious_diseases}
 \title{Contagious disease data for US states}
-\format{An object of class \code{"data.frame"}.}
+\format{
+An object of class \code{"data.frame"}.
+}
 \source{
 \href{http://www.tycho.pitt.edu/}{Tycho Project}
 }

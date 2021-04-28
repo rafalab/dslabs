@@ -4,7 +4,9 @@
 \name{stars}
 \alias{stars}
 \title{Physical Properties of Stars}
-\format{An object of class \code{"data.frame"}.}
+\format{
+An object of class \code{"data.frame"}.
+}
 \source{
 Compiled from multiple open-access references on \href{http://vizier.u-strasbg.fr/viz-bin/VizieR}{VizieR}.
 }

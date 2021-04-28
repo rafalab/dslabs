@@ -4,7 +4,9 @@
 \name{polls_2008}
 \alias{polls_2008}
 \title{Poll data for popular vote in 2008 presidential election}
-\format{An object of class \code{data.frame}.}
+\format{
+An object of class \code{data.frame}.
+}
 \source{
 \href{https://web.archive.org/web/20161108190914/http://www.pollster.com/08USPresGEMvO-2.html}{https://web.archive.org/web/20161108190914/http://www.pollster.com/08USPresGEMvO-2.html}
 }

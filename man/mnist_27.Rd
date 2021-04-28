@@ -4,7 +4,9 @@
 \name{mnist_27}
 \alias{mnist_27}
 \title{Useful example for illustrating machine learning algorithms based on MNIST data}
-\format{An object of class \code{list}.}
+\format{
+An object of class \code{list}.
+}
 \source{
 \href{http://yann.lecun.com/exdb/mnist/}{http://yann.lecun.com/exdb/mnist/}
 }

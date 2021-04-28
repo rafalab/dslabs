@@ -4,7 +4,9 @@
 \name{death_prob}
 \alias{death_prob}
 \title{2015 US Period Life Table}
-\format{An object of class \code{"data.frame"}.}
+\format{
+An object of class \code{"data.frame"}.
+}
 \source{
 \href{https://www.ssa.gov/oact/STATS/table4c6.html}{Social Security Administraton}
 }

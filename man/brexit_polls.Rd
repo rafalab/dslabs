@@ -4,7 +4,9 @@
 \name{brexit_polls}
 \alias{brexit_polls}
 \title{Brexit Poll Data}
-\format{An object of class \code{"data.frame"}.}
+\format{
+An object of class \code{"data.frame"}.
+}
 \source{
 \href{https://en.wikipedia.org/w/index.php?title=Opinion_polling_for_the_United_Kingdom_European_Union_membership_referendum&oldid=896735054}{Wikipedia}
 }

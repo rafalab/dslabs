@@ -4,7 +4,9 @@
 \name{historic_co2}
 \alias{historic_co2}
 \title{Atmospheric carbon dioxide concentration over 800,000 years}
-\format{An object of class \code{"data.frame"}.}
+\format{
+An object of class \code{"data.frame"}.
+}
 \source{
 Mauna Loa data from \href{https://www.esrl.noaa.gov/gmd/ccgg/trends/data.html}{NOAA}. Ice core data from Bereiter et al. 2015 via \href{https://www.ncdc.noaa.gov/paleo-search/study/17975}{NOAA}.
 }

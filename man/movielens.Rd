@@ -4,7 +4,9 @@
 \name{movielens}
 \alias{movielens}
 \title{Movie ratings}
-\format{Two object of class \code{data.frame}.}
+\format{
+Two object of class \code{data.frame}.
+}
 \source{
 \href{http://files.grouplens.org/datasets/movielens/ml-latest-small.zip}{http://files.grouplens.org/datasets/movielens/ml-latest-small.zip}
 }

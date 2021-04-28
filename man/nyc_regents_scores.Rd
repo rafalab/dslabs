@@ -4,7 +4,9 @@
 \name{nyc_regents_scores}
 \alias{nyc_regents_scores}
 \title{NYC Regents exams scores 2010}
-\format{An object of class \code{"data.frame"}.}
+\format{
+An object of class \code{"data.frame"}.
+}
 \source{
 New York City Department of Education via Amanda Cox.
 }

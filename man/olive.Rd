@@ -4,7 +4,9 @@
 \name{olive}
 \alias{olive}
 \title{Italian olive}
-\format{An object of class \code{"data.frame"}.}
+\format{
+An object of class \code{"data.frame"}.
+}
 \source{
 J. Zupan, and J. Gasteiger.  Neural Networks in Chemistry and Drug Design.
 }
