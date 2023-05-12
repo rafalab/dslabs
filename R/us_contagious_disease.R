@@ -14,7 +14,7 @@
 #
 #' @docType data
 #'
-#' @usage data(us_contagious_diseases)
+#' @usage us_contagious_diseases
 #'
 #' @format An object of class \code{"data.frame"}. 
 #'
@@ -25,6 +25,5 @@
 #' @source \href{http://www.tycho.pitt.edu/}{Tycho Project}
 #'
 #' @examples
-#' data(us_contagious_diseases)
 #' head(us_contagious_diseases)
 "us_contagious_diseases"

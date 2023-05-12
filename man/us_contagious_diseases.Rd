@@ -11,7 +11,7 @@ An object of class \code{"data.frame"}.
 \href{http://www.tycho.pitt.edu/}{Tycho Project}
 }
 \usage{
-data(us_contagious_diseases)
+us_contagious_diseases
 }
 \description{
 Yearly counts for Hepatitis A, Measles, Mumps, Pertussis, Polio,  Rubella, and Smallpox for US states. Original data courtesy of Tycho Project (http://www.tycho.pitt.edu/).
@@ -27,7 +27,6 @@ Yearly counts for Hepatitis A, Measles, Mumps, Pertussis, Polio,  Rubella, and S
 }
 }
 \examples{
-data(us_contagious_diseases)
 head(us_contagious_diseases)
 }
 \references{

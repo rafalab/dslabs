@@ -12,7 +12,7 @@
 #'
 #' @docType data
 #'
-#' @usage data(stars)
+#' @usage stars
 #'
 #' @format An object of class \code{"data.frame"}. 
 #'
@@ -22,6 +22,5 @@
 #' @source Compiled from multiple open-access references on \href{http://vizier.u-strasbg.fr/viz-bin/VizieR}{VizieR}.
 #'
 #' @examples
-#' data(stars)
 #' head(stars)
 "stars"

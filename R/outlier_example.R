@@ -5,7 +5,7 @@
 #'
 #' @docType data
 #'
-#' @usage data(outlier_example)
+#' @usage outlier_example
 #'
 #' @format An object of class \code{"numeric"}. 
 #'
@@ -14,7 +14,6 @@
 #'
 #'
 #' @examples
-#' data(outlier_example)
 #' mean(outlier_example)
 #' median(outlier_example)
 "outlier_example"

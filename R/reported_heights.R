@@ -12,7 +12,7 @@
 #'
 #' @docType data
 #'
-#' @usage data(reported_heights)
+#' @usage reported_heights
 #'
 #' @format An object of class \code{"data.frame"}. 
 #'
@@ -21,6 +21,5 @@
 #'
 #'
 #' @examples
-#' data(reported_heights)
 #' head(reported_heights)
 "reported_heights"

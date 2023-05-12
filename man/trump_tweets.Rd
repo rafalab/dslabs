@@ -8,10 +8,10 @@
 An object of class \code{"data.frame"}.
 }
 \source{
-The Trump Twitter Archive: \url{http://www.trumptwitterarchive.com}
+The Trump Twitter Archive: \url{https://www.thetrumparchive.com/}
 }
 \usage{
-data(trump_tweets)
+trump_tweets
 }
 \description{
 All tweets from Donald Trump's twitter account from 2009 to 2017
@@ -29,7 +29,6 @@ All tweets from Donald Trump's twitter account from 2009 to 2017
 }
 }
 \examples{
-data(trump_tweets)
 head(trump_tweets)
 
 }

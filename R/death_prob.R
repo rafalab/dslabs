@@ -11,7 +11,7 @@
 #'
 #' @docType data
 #'
-#' @usage data(death_prob)
+#' @usage death_prob
 #'
 #' @format An object of class \code{"data.frame"}. 
 #'
@@ -20,6 +20,5 @@
 #'
 #' @source \href{https://www.ssa.gov/oact/STATS/table4c6.html}{Social Security Administraton}
 #' @examples
-#' data(death_prob)
 #' head(death_prob)
 "death_prob"

@@ -8,10 +8,10 @@
 An object of class \code{list}.
 }
 \source{
-\href{http://mlr.cs.umass.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)}{UCI Machine Learning Repository}
+\href{https://archive.ics.uci.edu/ml/datasets/}{UCI Machine Learning Repository}
 }
 \usage{
-data(brca)
+brca
 }
 \description{
 Biopsy features for classification of 569 malignant (cancer) and benign (not cancer) breast masses.
@@ -42,7 +42,6 @@ This is a classic dataset for training and benchmarking machine learning algorit
 }
 }
 \examples{
-data(brca)
 table(brca$y)
 dim(brca$x)
 head(brca$x)

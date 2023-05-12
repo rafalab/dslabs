@@ -11,7 +11,7 @@ An object of class \code{"data.frame"}.
 MacFarling Meure et al. 2006 via \href{https://www.ncdc.noaa.gov/paleo-search/study/9959}{NOAA}.
 }
 \usage{
-data(greenhouse_gases)
+greenhouse_gases
 }
 \description{
 Concentrations of the three main greenhouse gases carbon dioxide, methane and nitrous oxide. Measurements are from the Law Dome Ice Core in Antarctica. Selected measurements are provided every 20 years from 1-2000 CE.
@@ -24,7 +24,6 @@ Concentrations of the three main greenhouse gases carbon dioxide, methane and ni
 }
 }
 \examples{
-data(greenhouse_gases)
 head(greenhouse_gases)
 }
 \keyword{datasets}

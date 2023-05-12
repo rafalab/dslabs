@@ -12,7 +12,7 @@
 #'
 #' @docType data
 #'
-#' @usage data(murders)
+#' @usage murders
 #'
 #' @format An object of class \code{"data.frame"}. 
 #'
@@ -22,6 +22,5 @@
 #' @source \href{https://en.wikipedia.org/wiki/Murder_in_the_United_States_by_state}{Wikipedia}
 #'
 #' @examples
-#' data(murders)
 #' print(murders)
 "murders"

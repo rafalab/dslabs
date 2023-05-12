@@ -12,7 +12,7 @@
 #' 
 #' @docType data
 #'
-#' @usage data(admissions)
+#' @usage admissions
 #'
 #' @format An object of class \code{"data.frame"}. 
 #'
@@ -20,6 +20,5 @@
 #'
 #' @source  PJ Bickel, EA Hammel, and JW O'Connell. Science (1975)
 #' @examples
-#' data(admissions)
 #' admissions
 "admissions"

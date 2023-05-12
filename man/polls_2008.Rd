@@ -11,7 +11,7 @@ An object of class \code{data.frame}.
 \href{https://web.archive.org/web/20161108190914/http://www.pollster.com/08USPresGEMvO-2.html}{https://web.archive.org/web/20161108190914/http://www.pollster.com/08USPresGEMvO-2.html}
 }
 \usage{
-data(polls_2008)
+polls_2008
 }
 \description{
 Data from different pollsters for the popular vote between Obama and McCain 
@@ -24,7 +24,6 @@ in the 2008 presidential election.
 }
 }
 \examples{
-data(polls_2008)
 with(polls_2008, plot(day, margin))
 
 }

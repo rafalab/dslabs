@@ -11,7 +11,7 @@ An object of class \code{"data.frame"}.
 PJ Bickel, EA Hammel, and JW O'Connell. Science (1975)
 }
 \usage{
-data(admissions)
+admissions
 }
 \description{
 The admission data for six majors for the fall of 1973; often used as an example of Simpson's paradox
@@ -25,7 +25,6 @@ The admission data for six majors for the fall of 1973; often used as an example
 }
 }
 \examples{
-data(admissions)
 admissions
 }
 \keyword{datasets}

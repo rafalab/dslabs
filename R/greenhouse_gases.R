@@ -11,7 +11,7 @@
 #'
 #' @docType data
 #'
-#' @usage data(greenhouse_gases)
+#' @usage greenhouse_gases
 #'
 #' @format An object of class \code{"data.frame"}. 
 #'
@@ -21,6 +21,5 @@
 #' @source MacFarling Meure et al. 2006 via \href{https://www.ncdc.noaa.gov/paleo-search/study/9959}{NOAA}.
 #'
 #' @examples
-#' data(greenhouse_gases)
 #' head(greenhouse_gases)
 "greenhouse_gases"

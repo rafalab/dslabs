@@ -11,7 +11,7 @@ An object of class \code{"data.frame"}.
 \href{https://www.ncdc.noaa.gov/cag/global/time-series}{NOAA} and Boden, T.A., G. Marland, and R.J. Andres (2017) via \href{https://cdiac.ess-dive.lbl.gov/trends/emis/tre_glob_2014.html}{CDIAC}
 }
 \usage{
-data(temp_carbon)
+temp_carbon
 }
 \description{
 Annual mean global temperature anomaly on land, sea and combined, 1880-2018. Annual global carbon emissions, 1751-2014.
@@ -26,7 +26,6 @@ Annual mean global temperature anomaly on land, sea and combined, 1880-2018. Ann
 }
 }
 \examples{
-data(temp_carbon)
 head(temp_carbon)
 }
 \keyword{datasets}

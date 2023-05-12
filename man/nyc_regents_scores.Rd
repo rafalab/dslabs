@@ -11,7 +11,7 @@ An object of class \code{"data.frame"}.
 New York City Department of Education via Amanda Cox.
 }
 \usage{
-data(nyc_regents_scores)
+nyc_regents_scores
 }
 \description{
 Distribution of scores for New York City Regents algebra, global history, biology, English, and U.S. history exams. 
@@ -28,7 +28,6 @@ These data were used to make \href{http://graphics8.nytimes.com/images/2011/02/1
 }
 }
 \examples{
-data(nyc_regents_scores)
 print(nyc_regents_scores)
 }
 \keyword{datasets}

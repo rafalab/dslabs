@@ -8,13 +8,12 @@
 An object of class \code{"integer"}.
 }
 \usage{
-data(na_example)
+na_example
 }
 \description{
 This dataset was randomly generated.
 }
 \examples{
-data(na_example)
 print(sum(is.na(na_example)))
 }
 \keyword{datasets}

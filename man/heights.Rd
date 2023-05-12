@@ -8,7 +8,7 @@
 An object of class \code{"data.frame"}.
 }
 \usage{
-data(heights)
+heights
 }
 \description{
 Self-reported heights in inches for males and females.
@@ -20,7 +20,6 @@ Self-reported heights in inches for males and females.
 }
 }
 \examples{
-data(heights)
 head(heights)
 }
 \keyword{datasets}

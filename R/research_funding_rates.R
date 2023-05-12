@@ -18,20 +18,20 @@
 #' 
 #' @docType data
 #'
-#' @usage data(research_funding_rates)
+#' @usage research_funding_rates
 #'
 #' @format An object of class \code{"data.frame"}. 
 #'
 #' @keywords datasets
 #'
-#' @source  van der Lee and Ellemers (2015) PNAS \url{http://www.pnas.org/content/112/40/12349.abstract}
+#' @source  van der Lee and Ellemers (2015) PNAS \url{https://www.pnas.org/content/112/40/12349.abstract/}
 #' 
 #' @aliases raw_data_research_funding_rates
 #' 
 #' @examples
-#' data(research_funding_rates)
+
 #' research_funding_rates
 #' # The raw data for this table is available from
-#' data(raw_data_research_funding_rates)
+#' invisible(raw_data_research_funding_rates)
 #' 
 "research_funding_rates"

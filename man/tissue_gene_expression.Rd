@@ -11,7 +11,7 @@ An object of class \code{list}.
 \href{https://github.com/genomicsclass/tissuesGeneExpression}{https://github.com/genomicsclass/tissuesGeneExpression}
 }
 \usage{
-data(tissue_gene_expression)
+tissue_gene_expression
 }
 \description{
 This is a subset of the data provided by the \code{tissuesGeneExpression}
@@ -30,7 +30,6 @@ clustering and machine learning techniques.
 }
 }
 \examples{
-data(tissue_gene_expression)
 table(tissue_gene_expression$y)
 dim(tissue_gene_expression$x)
 }

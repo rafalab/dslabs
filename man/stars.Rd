@@ -11,7 +11,7 @@ An object of class \code{"data.frame"}.
 Compiled from multiple open-access references on \href{http://vizier.u-strasbg.fr/viz-bin/VizieR}{VizieR}.
 }
 \usage{
-data(stars)
+stars
 }
 \description{
 Physical properties of selected stars, including luminosity, temperature, and spectral class.
@@ -25,7 +25,6 @@ Physical properties of selected stars, including luminosity, temperature, and sp
 }
 }
 \examples{
-data(stars)
 head(stars)
 }
 \keyword{datasets}

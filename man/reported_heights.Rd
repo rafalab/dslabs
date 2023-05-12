@@ -8,7 +8,7 @@
 An object of class \code{"data.frame"}.
 }
 \usage{
-data(reported_heights)
+reported_heights
 }
 \description{
 Students were asked to report their height (in inches) and sex in an online form. 
@@ -22,7 +22,6 @@ This table includes the results from four courses.
 }
 }
 \examples{
-data(reported_heights)
 head(reported_heights)
 }
 \keyword{datasets}

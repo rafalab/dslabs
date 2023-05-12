@@ -19,7 +19,6 @@
 #' Note that the data is over 10MB, so the download may take several seconds depending on internet speed. If you plan to load the data more than once
 #' we recommend you download the data once and read it from disk in the future. See examples.
 #' 
-#' @source http://yann.lecun.com/exdb/mnist/
 #' 
 #' @references Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner. "Gradient-based learning applied to document recognition." Proceedings of the IEEE, 86(11):2278-2324, November 1998.  
 #' 
@@ -46,7 +45,8 @@
 #' }
 #' @export
 #' 
-
+#' @importFrom utils download.file
+#' 
 read_mnist <- function(path = NULL, download = FALSE, destdir = tempdir(), 
                        url = "https://www2.harvardx.harvard.edu/courses/IDS_08_v2_03/", keep.files = TRUE){
 

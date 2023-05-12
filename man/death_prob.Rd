@@ -11,7 +11,7 @@ An object of class \code{"data.frame"}.
 \href{https://www.ssa.gov/oact/STATS/table4c6.html}{Social Security Administraton}
 }
 \usage{
-data(death_prob)
+death_prob
 }
 \description{
 Probability of death within 1 year by age and sex in the United States in 2015.
@@ -24,7 +24,6 @@ Probability of death within 1 year by age and sex in the United States in 2015.
 }
 }
 \examples{
-data(death_prob)
 head(death_prob)
 }
 \keyword{datasets}

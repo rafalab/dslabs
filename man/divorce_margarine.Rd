@@ -11,7 +11,7 @@ An object of class \code{"data.frame"}.
 \href{http://www.tylervigen.com/spurious-correlations}{Spurious Correlations}
 }
 \usage{
-data(divorce_margarine)
+divorce_margarine
 }
 \description{
 Divorce rates in Maine and per capita consumption of margarine in US data
@@ -24,7 +24,6 @@ Divorce rates in Maine and per capita consumption of margarine in US data
 }
 }
 \examples{
-data(divorce_margarine)
 with(divorce_margarine, plot(margarine_consumption_per_capita, divorce_rate_maine))
 }
 \keyword{datasets}

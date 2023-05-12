@@ -18,7 +18,7 @@
 #
 #' @docType data
 #'
-#' @usage data(tissue_gene_expression)
+#' @usage tissue_gene_expression
 #'
 #' @format An object of class \code{list}.
 #'  
@@ -29,7 +29,6 @@
 #' 
 #'
 #' @examples
-#' data(tissue_gene_expression)
 #' table(tissue_gene_expression$y)
 #' dim(tissue_gene_expression$x)
 "tissue_gene_expression"

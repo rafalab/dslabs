@@ -11,7 +11,7 @@
 #'
 #' @docType data
 #'
-#' @usage data(historic_co2)
+#' @usage historic_co2
 #'
 #' @format An object of class \code{"data.frame"}. 
 #'
@@ -22,6 +22,5 @@
 #' 
 #'
 #' @examples
-#' data(historic_co2)
 #' head(historic_co2)
 "historic_co2"

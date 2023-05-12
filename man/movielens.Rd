@@ -11,7 +11,7 @@ Two object of class \code{data.frame}.
 \href{http://files.grouplens.org/datasets/movielens/ml-latest-small.zip}{http://files.grouplens.org/datasets/movielens/ml-latest-small.zip}
 }
 \usage{
-data(movielens)
+movielens
 }
 \description{
 MovieLens Latest Dataset (Small)
@@ -28,7 +28,6 @@ MovieLens Latest Dataset (Small)
 }
 }
 \examples{
-data(movielens)
 head(movielens)
 }
 \references{

@@ -10,7 +10,7 @@
 An object of class \code{"data.frame"}.
 }
 \usage{
-data(gapminder)
+gapminder
 }
 \description{
 Health and income outcomes for 184 countries from 1960 to 2016. Also includes two character vectors, \code{oecd} 
@@ -30,7 +30,6 @@ and \code{opec}, with the names of OECD and OPEC countries from 2016.
 }
 }
 \examples{
-data(gapminder)
 head(gapminder)
 print(oecd)
 print(opec)

@@ -11,7 +11,7 @@ An object of class \code{"data.frame"}.
 J. Zupan, and J. Gasteiger.  Neural Networks in Chemistry and Drug Design.
 }
 \usage{
-data(olive)
+olive
 }
 \description{
 Composition in percentage of eight fatty acids found in the lipid fraction of 572 Italian olive oils
@@ -31,7 +31,6 @@ Composition in percentage of eight fatty acids found in the lipid fraction of 57
 }
 }
 \examples{
-data(olive)
 head(olive)
 }
 \keyword{datasets}

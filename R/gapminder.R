@@ -18,7 +18,7 @@
 #'
 #' @docType data
 #'
-#' @usage data(gapminder)
+#' @usage gapminder
 #'
 #' @format An object of class \code{"data.frame"}. 
 #'
@@ -27,7 +27,6 @@
 #' @aliases oecd opec
 #'
 #' @examples
-#' data(gapminder)
 #' head(gapminder)
 #' print(oecd)
 #' print(opec)

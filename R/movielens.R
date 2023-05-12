@@ -14,7 +14,7 @@
 #
 #' @docType data
 #' 
-#' @usage data(movielens)
+#' @usage movielens
 #'
 #' @format Two object of class \code{data.frame}. 
 #'
@@ -26,6 +26,5 @@
 #' @source \href{http://files.grouplens.org/datasets/movielens/ml-latest-small.zip}{http://files.grouplens.org/datasets/movielens/ml-latest-small.zip}
 #' 
 #' @examples
-#' data(movielens)
 #' head(movielens)
 "movielens"

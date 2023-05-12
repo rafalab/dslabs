@@ -10,7 +10,7 @@
 #'
 #' @docType data
 #'
-#' @usage data(heights)
+#' @usage heights
 #'
 #' @format An object of class \code{"data.frame"}. 
 #'
@@ -19,6 +19,5 @@
 #'
 #'
 #' @examples
-#' data(heights)
 #' head(heights)
 "heights"

@@ -3,9 +3,6 @@
 \name{read_mnist}
 \alias{read_mnist}
 \title{Download and read the mnist dataset}
-\source{
-http://yann.lecun.com/exdb/mnist/
-}
 \usage{
 read_mnist(
   path = NULL,

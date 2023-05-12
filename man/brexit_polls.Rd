@@ -11,7 +11,7 @@ An object of class \code{"data.frame"}.
 \href{https://en.wikipedia.org/w/index.php?title=Opinion_polling_for_the_United_Kingdom_European_Union_membership_referendum&oldid=896735054}{Wikipedia}
 }
 \usage{
-data(brexit_polls)
+brexit_polls
 }
 \description{
 Brexit (EU referendum) poll outcomes for 127 polls from January 2016 to the referendum date on June 23, 2016.
@@ -30,7 +30,6 @@ Brexit (EU referendum) poll outcomes for 127 polls from January 2016 to the refe
 }
 }
 \examples{
-data(brexit_polls)
 head(brexit_polls)
 }
 \keyword{datasets}

@@ -15,16 +15,15 @@
 #' 
 #' @docType data
 #'
-#' @usage data(trump_tweets)
+#' @usage trump_tweets
 #'
 #' @format An object of class \code{"data.frame"}. 
 #'
 #' @keywords datasets
 #'
-#' @source  The Trump Twitter Archive: \url{http://www.trumptwitterarchive.com}
+#' @source  The Trump Twitter Archive: \url{https://www.thetrumparchive.com/}
 #' 
 #' @examples
-#' data(trump_tweets)
 #' head(trump_tweets)
 #' 
 "trump_tweets"

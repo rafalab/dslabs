@@ -11,7 +11,7 @@
 #' 
 #' @docType data
 #'
-#' @usage data(polls_2008)
+#' @usage polls_2008
 #'
 #' @format An object of class \code{data.frame}.
 #'  
@@ -21,7 +21,6 @@
 #' @source \href{https://web.archive.org/web/20161108190914/http://www.pollster.com/08USPresGEMvO-2.html}{https://web.archive.org/web/20161108190914/http://www.pollster.com/08USPresGEMvO-2.html}
 #'
 #' @examples
-#' data(polls_2008)
 #' with(polls_2008, plot(day, margin))
 #' 
 "polls_2008"

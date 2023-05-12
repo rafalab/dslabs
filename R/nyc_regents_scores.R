@@ -14,7 +14,7 @@
 #'
 #' @docType data
 #'
-#' @usage data(nyc_regents_scores)
+#' @usage nyc_regents_scores
 #'
 #' @format An object of class \code{"data.frame"}. 
 #'
@@ -24,6 +24,5 @@
 #' @source New York City Department of Education via Amanda Cox.
 #'
 #' @examples
-#' data(nyc_regents_scores)
 #' print(nyc_regents_scores)
 "nyc_regents_scores"

@@ -5,7 +5,7 @@
 #'
 #' @docType data
 #'
-#' @usage data(na_example)
+#' @usage na_example
 #'
 #' @format An object of class \code{"integer"}. 
 #'
@@ -14,6 +14,5 @@
 #'
 #'
 #' @examples
-#' data(na_example)
 #' print(sum(is.na(na_example)))
 "na_example"

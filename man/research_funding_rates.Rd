@@ -9,10 +9,10 @@
 An object of class \code{"data.frame"}.
 }
 \source{
-van der Lee and Ellemers (2015) PNAS \url{http://www.pnas.org/content/112/40/12349.abstract}
+van der Lee and Ellemers (2015) PNAS \url{https://www.pnas.org/content/112/40/12349.abstract/}
 }
 \usage{
-data(research_funding_rates)
+research_funding_rates
 }
 \description{
 Table S1 from paper title "Gender contributes to personal research funding success in The Netherlands"
@@ -32,10 +32,9 @@ Table S1 from paper title "Gender contributes to personal research funding succe
 }
 }
 \examples{
-data(research_funding_rates)
 research_funding_rates
 # The raw data for this table is available from
-data(raw_data_research_funding_rates)
+invisible(raw_data_research_funding_rates)
 
 }
 \keyword{datasets}
