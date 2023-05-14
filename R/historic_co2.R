@@ -18,7 +18,7 @@
 #' @keywords datasets
 #'
 #'
-#' @source Mauna Loa data from \href{https://www.esrl.noaa.gov/gmd/ccgg/trends/data.html}{NOAA}. Ice core data from Bereiter et al. 2015 via \href{https://www.ncdc.noaa.gov/paleo-search/study/17975}{NOAA}.
+#' @source Mauna Loa data from \href{https://gml.noaa.gov/ccgg/trends/data.html}{NOAA}. Ice core data from Bereiter et al. 2015 via \href{https://gml.noaa.gov/ccgg/trends/data.html}{NOAA}.
 #' 
 #'
 #' @examples

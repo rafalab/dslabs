@@ -18,7 +18,7 @@
 #'
 #' @keywords datasets
 #'
-#' @source \href{http://www.tylervigen.com/spurious-correlations}{Spurious Correlations}
+#' @source \href{https://www.tylervigen.com/spurious-correlations}{Spurious Correlations}
 #'
 #' @examples
 #' with(divorce_margarine, plot(margarine_consumption_per_capita, divorce_rate_maine))

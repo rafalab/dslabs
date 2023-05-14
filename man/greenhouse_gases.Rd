@@ -8,7 +8,7 @@
 An object of class \code{"data.frame"}.
 }
 \source{
-MacFarling Meure et al. 2006 via \href{https://www.ncdc.noaa.gov/paleo-search/study/9959}{NOAA}.
+MacFarling Meure et al. 2006 via \href{https://www.ncei.noaa.gov/access/paleo-search/study/9959/}{NOAA}.
 }
 \usage{
 greenhouse_gases

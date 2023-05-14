@@ -19,7 +19,7 @@
 #' @keywords datasets
 #'
 #'
-#' @source \href{https://en.wikipedia.org/wiki/Murder_in_the_United_States_by_state}{Wikipedia}
+#' @source \href{https://en.wikipedia.org/wiki/Gun_violence_in_the_United_States_by_state}{Wikipedia}
 #'
 #' @examples
 #' print(murders)

@@ -8,7 +8,7 @@
 An object of class \code{"data.frame"}.
 }
 \source{
-\href{http://www.tylervigen.com/spurious-correlations}{Spurious Correlations}
+\href{https://www.tylervigen.com/spurious-correlations}{Spurious Correlations}
 }
 \usage{
 divorce_margarine

@@ -9,7 +9,7 @@
 An object of class \code{"data.frame"}.
 }
 \source{
-van der Lee and Ellemers (2015) PNAS \url{https://www.pnas.org/content/112/40/12349.abstract/}
+van der Lee and Ellemers (2015) PNAS \url{https://www.pnas.org/doi/abs/10.1073/pnas.1510159112}
 }
 \usage{
 research_funding_rates

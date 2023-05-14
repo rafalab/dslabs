@@ -24,7 +24,7 @@
 #'
 #' @keywords datasets
 #'
-#' @source  van der Lee and Ellemers (2015) PNAS \url{https://www.pnas.org/content/112/40/12349.abstract/}
+#' @source  van der Lee and Ellemers (2015) PNAS \url{https://www.pnas.org/doi/abs/10.1073/pnas.1510159112}
 #' 
 #' @aliases raw_data_research_funding_rates
 #' 

@@ -8,7 +8,7 @@
 An object of class \code{"data.frame"}.
 }
 \source{
-\href{https://www.ncdc.noaa.gov/cag/global/time-series}{NOAA} and Boden, T.A., G. Marland, and R.J. Andres (2017) via \href{https://cdiac.ess-dive.lbl.gov/trends/emis/tre_glob_2014.html}{CDIAC}
+\href{https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global/time-series/}{NOAA} and Boden, T.A., G. Marland, and R.J. Andres (2017) via \href{https://cdiac.ess-dive.lbl.gov/trends/emis/tre_glob_2014.html}{CDIAC}
 }
 \usage{
 temp_carbon
