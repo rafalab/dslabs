@@ -6,11 +6,11 @@ library(stringr)
 
 ### US murders 2010
 
-url <- "https://en.wikipedia.org/wiki/Murder_in_the_United_States_by_state"
+url <- "https://en.wikipedia.org/w/index.php?title=Gun_violence_in_the_United_States_by_state&direction=prev&oldid=810166167"
 h <- read_html(url)
 us_murders <- h %>% html_nodes("table") %>%  
   html_table %>% .[[1]] %>% 
-  tbl_df %>% setNames(c("state", "population", "population_density", 
+  tibble %>% setNames(c("state", "population", "population_density", 
                         "murders", "gun_murders", "gun_ownership", "murder_rate", "gun_murder_rate"))
 
 to_parse_number <- names(us_murders)[-1]

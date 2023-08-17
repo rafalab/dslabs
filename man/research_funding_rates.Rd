@@ -8,9 +8,6 @@
 \format{
 An object of class \code{"data.frame"}.
 }
-\source{
-van der Lee and Ellemers (2015) PNAS \url{https://www.pnas.org/doi/abs/10.1073/pnas.1510159112}
-}
 \usage{
 research_funding_rates
 }
@@ -36,5 +33,8 @@ research_funding_rates
 # The raw data for this table is available from
 invisible(raw_data_research_funding_rates)
 
+}
+\references{
+van der Lee R, Ellemers N. Gender contributes to personal research funding success in The Netherlands. Proc Natl Acad Sci U S A. 2015 Oct 6;112(40):12349-53. doi: 10.1073/pnas.1510159112. Epub 2015 Sep 21. PMID: 26392544; PMCID: PMC4603485.
 }
 \keyword{datasets}

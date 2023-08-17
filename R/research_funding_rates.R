@@ -24,7 +24,7 @@
 #'
 #' @keywords datasets
 #'
-#' @source  van der Lee and Ellemers (2015) PNAS \url{https://www.pnas.org/doi/abs/10.1073/pnas.1510159112}
+#' @references van der Lee R, Ellemers N. Gender contributes to personal research funding success in The Netherlands. Proc Natl Acad Sci U S A. 2015 Oct 6;112(40):12349-53. doi: 10.1073/pnas.1510159112. Epub 2015 Sep 21. PMID: 26392544; PMCID: PMC4603485.
 #' 
 #' @aliases raw_data_research_funding_rates
 #' 
