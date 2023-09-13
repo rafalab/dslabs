@@ -26,7 +26,8 @@ df <- data.frame(
 
 df <- df[order(df$name),]
 # Write the data frame to CSV in ISO-8859-1 encoding
-write.csv(df, file = "inst/extdata/hw-submission-timestamps.csv", fileEncoding = "ISO-8859-1")
+write.csv(df, file = "inst/extdata/hw-submission-timestamps.csv", fileEncoding = "ISO-8859-1",
+          row.names = FALSE)
 
 ## test
 Sys.setlocale("LC_TIME", original_time)
