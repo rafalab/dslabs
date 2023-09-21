@@ -7,7 +7,7 @@ Sys.setlocale("LC_TIME", "es_ES.UTF-8")
 nombre <- c("Plácido", "João", "Beyoncé", "López", "Thalía", "Blümchen", "Ñengo") 
 df <- data.frame(
   nombre = nombre,
-  dob = format(c(make_date(1941, 1, 24),
+  f.n. = format(c(make_date(1941, 1, 24),
                  make_date(1931, 6, 10),
                  make_date(1981, 9, 4),
                  make_date(1969, 7, 24), 
@@ -35,8 +35,7 @@ write.csv(df, file = "inst/extdata/calificaciones.csv", fileEncoding = "ISO-8859
 Sys.setlocale("LC_TIME", original_time)
 
 library(readr)
-x <- read_csv("inst/extdata/calificaciones.csv")
+try({x <- read_csv("inst/extdata/calificaciones.csv")})
 x <- read_csv("inst/extdata/calificaciones.csv", locale = locale(encoding = "ISO-8859-1", decimal_mark = ","))
-parse_date(x$dob, format = "%d de %B de %Y", locale = locale(date_names = "es"))
-parse_date(x$dob, format = "%d de %B de %Y", locale = locale(date_names = "es"))
-with_tz(x$stamp, tz =  Sys.timezone())
+parse_date(x$f.n., format = "%d de %B de %Y", locale = locale(date_names = "es"))
+with_tz(x$estampa, tz =  Sys.timezone())
