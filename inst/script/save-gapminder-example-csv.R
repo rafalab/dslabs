@@ -12,6 +12,10 @@
 # `price` is deliberately a single token and `screen_time` two tokens so the
 # separate_wider_delim(too_many = "merge") lesson still has a "2 pieces vs
 # 3 pieces" case to handle.
+#
+# Years are limited to 2008-2015: the app-store era (Apple's App Store and
+# Android Market both opened in 2008). global_tech_adoption keeps gapminder's
+# 1960-2016 years, which make no sense for app prices; 2016 has no price.
 
 library(behdslabs)
 library(dplyr)
@@ -20,7 +24,7 @@ library(tidyr)
 countries <- c("Germany", "South Korea")
 
 d <- global_tech_adoption |>
-  filter(country %in% countries & year >= 1960 & year <= 2015) |>
+  filter(country %in% countries & year >= 2008 & year <= 2015) |>
   transmute(country, year,
             price = round(avg_price_per_app_usd, 2),
             screen_time = round(avg_daily_screen_time_hours, 2))
