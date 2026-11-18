@@ -1,10 +1,13 @@
 #' Simulate responses to a multi-item Likert scale
 #'
-#' Generates responses to a psychological scale from an explicit Classical Test
-#' Theory model. Each respondent has a \emph{true score} on a latent construct;
-#' each item is that true score plus its own independent measurement error
-#' (\eqn{X = T + E}); and the resulting value is then cut into ordered response
-#' categories. Written for the measurement chapter of the Behavioural Data
+#' Generates responses to a psychological scale from a latent-threshold model.
+#' Each respondent has a \emph{true score} on a latent construct; each item's
+#' latent response is that true score plus its own independent measurement
+#' error (CTT-style, \eqn{X = T + E}, but on the latent value); and that value
+#' is then cut into ordered response categories by an explicit response rule.
+#' Because of this last step, the recorded total follows Classical Test Theory
+#' only approximately, and its reliability is not set directly: estimate it
+#' on the output. Written for the measurement chapter of the Behavioural Data
 #' Science course, where the point is precisely that the true score is
 #' something you can never observe in real data -- so it is returned here.
 #'
@@ -41,9 +44,10 @@
 #'   a mean and still differ in how spread out they are, which on a scale with
 #'   a ceiling is enough to make the two groups' \emph{scores} differ even
 #'   though the construct does not. Ignored when \code{true_score} is supplied.
-#' @param error_sd Standard deviation of the per-item measurement error. This
-#'   is the reliability dial: larger values mean a noisier, less reliable
-#'   scale.
+#' @param error_sd Standard deviation of the per-item measurement error, on
+#'   the latent scale. This is the main driver of reliability (larger values
+#'   mean a noisier, less reliable scale), but it is not reliability itself,
+#'   which is not set directly: estimate it on the output.
 #' @param thresholds Optional numeric vector of \code{n_levels - 1} cut points
 #'   on the latent scale. If \code{NULL} (default), cut points are generated
 #'   according to \code{equal_spacing}.
